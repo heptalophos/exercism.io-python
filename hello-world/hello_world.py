@@ -6,6 +6,6 @@ def isBlank(str=None):
     return True if ((str is None) or (str == '')) else False 
 
 def hello(name=''):
-    if ((name == '') or (name is None)):
+    if (isBlank(name)):
         name = 'World'
     return 'Hello, ' + name + '!'
