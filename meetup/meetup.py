@@ -2,7 +2,6 @@ import datetime
 
 WEEKDAY = {'Monday': 0, 'Tuesday': 1, 'Wednesday': 2, 'Thursday': 3, 'Friday' : 4, 'Saturday': 5, 'Sunday': 6}
 
-
 def last(d):
     return d.month != (d + datetime.timedelta(days=7)).month
 
@@ -25,6 +24,10 @@ def meetup_day(year, month, weekday, which):
         day += datetime.timedelta(days=1)
     
     raise Exception("Not a valid meetup day")
+
+
+class MeetupDayException(Exception):
+    pass
 
 
 
