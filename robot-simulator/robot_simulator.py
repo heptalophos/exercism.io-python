@@ -29,15 +29,16 @@ class Robot(object):
     def advance(self):
         x, y = self.coordinates
         if self.bearing == NORTH:
-            self.coordinates = (x, y+1)
-        elif self.bearing == EAST:
-            self.coordinates = (x+1, y)
-        elif self.bearing == SOUTH:
-            self.coordinates = (x, y-1)
-        elif self.bearing == WEST:
-            self.coordinates = (x-1, y)
-        else:
-            raise Exeption("Invalid direction") 
+            self.coordinates = (x, y+1)  
+        if self.bearing == EAST:            
+            self.coordinates = (x+1, y) 
+        if self.bearing == SOUTH:
+            self.coordinates = (x, y-1)  
+        if self.bearing == WEST:
+            self.coordinates = (x-1, y) 
+        if self.bearing not in [NORTH, EAST, SOUTH, WEST]:
+            raise Exeption("Invalid direction")
+             
 
     def simulate(self, commands):
         for c in commands:
