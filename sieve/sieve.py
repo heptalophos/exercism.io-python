@@ -1,14 +1,12 @@
 def sieve(limit):
-    
-    non_primes = set()
-    primes = []
-    if limit == 1:
-        return []
-    
-    primes.append(2)
+    limit += 1
+    primes = {}
+    for i in range(2, limit):
+        primes[i] = True
 
-    for i in range(3, limit+1, 2):
-        if i not in non_primes:
-            primes.append(i)
-            non_primes.update(range(i**2, limit, i))
-    return primes       
+    for i in primes:
+        multiples = range(i, limit, i)
+        for m in multiples[1:]:
+            primes[m] = False
+    
+    return [x for x in primes if primes[x] == True]
