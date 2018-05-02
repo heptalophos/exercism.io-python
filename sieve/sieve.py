@@ -1,12 +1,13 @@
 def sieve(limit):
     limit += 1
-    primes = {}
+    factors = [False for _ in range(limit)]
+    factors[0:1] = [True, True]
+    for s in range(2, limit):
+        if  not factors[s]:
+            for i in range(2*s, limit, s):
+                factors[i] = True
+    primes = []
     for i in range(2, limit):
-        primes[i] = True
-
-    for i in primes:
-        multiples = range(i, limit, i)
-        for m in multiples[1:]:
-            primes[m] = False
-    
-    return [x for x in primes if primes[x] == True]
+        if not factors[i]:
+            primes.append(i)
+    return primes
