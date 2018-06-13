@@ -1,0 +1,13 @@
+test_all_values_are_none (__main__.FlattenArrayTests) ... ok
+test_empty_nested_lists (__main__.FlattenArrayTests) ... ok
+test_five_level_nesting (__main__.FlattenArrayTests) ... ok
+test_flatten_integers (__main__.FlattenArrayTests) ... ok
+test_no_nesting (__main__.FlattenArrayTests) ... ok
+test_six_level_nesting (__main__.FlattenArrayTests) ... ok
+test_strings (__main__.FlattenArrayTests) ... ok
+test_with_none_values (__main__.FlattenArrayTests) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.017s
+
+OK
