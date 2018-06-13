@@ -1,0 +1,12 @@
+test_add_more_students_in_same_class (__main__.SchoolTest) ... ok
+test_add_student (__main__.SchoolTest) ... ok
+test_add_students_to_different_grades (__main__.SchoolTest) ... ok
+test_an_empty_school (__main__.SchoolTest) ... ok
+test_get_students_in_a_grade (__main__.SchoolTest) ... ok
+test_get_students_in_a_non_existant_grade (__main__.SchoolTest) ... ok
+test_sort_school (__main__.SchoolTest) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.052s
+
+OK
