@@ -1,0 +1,11 @@
+test_different_garden_with_single_student (__main__.KindergartenGardenTests) ... ok
+test_disordered_test (__main__.KindergartenGardenTests) ... ok
+test_full_garden (__main__.KindergartenGardenTests) ... ok
+test_garden_with_single_student (__main__.KindergartenGardenTests) ... ok
+test_garden_with_two_students (__main__.KindergartenGardenTests) ... ok
+test_multiple_students_for_the_same_garden_with_three_students (__main__.KindergartenGardenTests) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.016s
+
+OK
