@@ -12,3 +12,19 @@ test_age_on_venus (__main__.SpaceAgeTest) ... ok
 Ran 9 tests in 0.016s
 
 OK
+
+
+test_age_in_seconds (__main__.SpaceAgeTest) ... ok
+test_age_on_earth (__main__.SpaceAgeTest) ... ok
+test_age_on_jupiter (__main__.SpaceAgeTest) ... ok
+test_age_on_mars (__main__.SpaceAgeTest) ... ok
+test_age_on_mercury (__main__.SpaceAgeTest) ... ok
+test_age_on_neptune (__main__.SpaceAgeTest) ... ok
+test_age_on_saturn (__main__.SpaceAgeTest) ... ok
+test_age_on_uranus (__main__.SpaceAgeTest) ... ok
+test_age_on_venus (__main__.SpaceAgeTest) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.021s
+
+OK
