@@ -1,0 +1,12 @@
+test_cube_of_a_prime (__main__.PrimeFactorsTest) ... ok
+test_factors_include_a_large_prime (__main__.PrimeFactorsTest) ... ok
+test_no_factors (__main__.PrimeFactorsTest) ... ok
+test_prime_number (__main__.PrimeFactorsTest) ... ok
+test_product_of_primes (__main__.PrimeFactorsTest) ... ok
+test_product_of_primes_and_non_primes (__main__.PrimeFactorsTest) ... ok
+test_square_of_a_prime (__main__.PrimeFactorsTest) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.983s
+
+OK
