@@ -1,0 +1,7 @@
+============================= test session starts =============================
+platform win32 -- Python 3.6.0, pytest-3.5.1, py-1.5.3, pluggy-0.6.0
+rootdir: ~\exercism\python\rotational-cipher, inifile:
+plugins: django-3.1.2, cov-2.5.1
+collected 0 items
+
+======================== no tests ran in 0.02 seconds =========================
