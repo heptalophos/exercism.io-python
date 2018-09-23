@@ -3,4 +3,12 @@ test_numerals (__main__.RomanNumeralsTest) ... ok
 ----------------------------------------------------------------------
 Ran 1 test in 0.003s
 
-OK
+OK============================= test session starts =============================
+platform win32 -- Python 3.6.0, pytest-3.5.1, py-1.5.3, pluggy-0.6.0
+rootdir: ~\exercism\python\roman-numerals, inifile:
+plugins: django-3.1.2, cov-2.5.1
+collected 1 item
+
+roman_numerals_test.py .                                                 [100%]
+
+========================== 1 passed in 0.06 seconds ===========================
