@@ -1,7 +1,14 @@
 def saddle_points(matrix):
-    if len(matrix) != 0:
-        if sum(len(row) for row in matrix) != len(matrix) * len(matrix[0]):
+    if not matrix:
+        return set()
+    if any(len(row) != len(matrix[0]) for row in matrix):
             raise ValueError("irregular matrix")
-    return set((ridx, cidx) for ridx, row in enumerate(matrix)
-                            for cidx, cell in enumerate(row)
-                            if cell == min(list(zip(*matrix))[cidx]) == max(row))
+    return {(rx, cx) for rx, row in enumerate(matrix)
+                     for cx, col in enumerate(row)
+                     if min(list(zip(*matrix))[cx]) == max(row)}
+
+    # def transpose(m):
+    #     return [[m[j][i] for j in range(len(m))] for i in range(len(m[0]))]
+    # return set((rx, cx) for rx, row in enumerate(matrix)
+    #                     for cx, col in enumerate(transpose(matrix))
+    #                     if min(col) == max(row))
