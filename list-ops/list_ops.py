@@ -25,4 +25,5 @@ def foldr(function, xs, acc):
     return foldl(lambda x, result: function(result, x), reverse(xs), acc)
 
 def reverse(xs):
-    return foldl(lambda x, result: append([x], result), xs, [])
+    # return foldl(lambda x, result: append([x], result), xs, [])
+    return xs[::-1]
