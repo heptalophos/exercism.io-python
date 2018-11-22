@@ -1,6 +1,5 @@
 from collections import Counter
 
-
 def counts(n):
     return lambda dice: n * Counter(dice)[n]
 
