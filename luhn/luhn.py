@@ -11,6 +11,4 @@ class Luhn(object):
             for i in range(len(digits)):
                 if i % 2 == 1:
                     digits[i] = digits[i] * 2 if digits[i] * 2 < 9 else digits[i] * 2 - 9
-            return sum(digits) % 10 == 0 
-
-
+            return sum(digits) % 10 == 0
