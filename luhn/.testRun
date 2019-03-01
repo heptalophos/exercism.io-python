@@ -17,3 +17,14 @@ test_valid_strings_with_symbols_included_become_invalid (__main__.LuhnTest) ... 
 Ran 14 tests in 0.016s
 
 OK
+
+
+============================= test session starts =============================
+platform win32 -- Python 3.7.0, pytest-3.8.0, py-1.6.0, pluggy-0.7.1
+rootdir: C:\Users\Chris\exercism\python\luhn, inifile:
+plugins: remotedata-0.3.0, openfiles-0.3.0, doctestplus-0.1.3, arraydiff-0.2
+collected 17 items
+
+luhn_test.py .................                                           [100%]
+
+========================== 17 passed in 0.04 seconds ==========================
