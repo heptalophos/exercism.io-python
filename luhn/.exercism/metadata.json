@@ -1,9 +1,9 @@
 {
-    "track": "python",
-    "exercise": "luhn",
-    "id": "",
-    "url": "https://exercism.io/tracks/python/exercises/luhn/solutions/",
-    "handle": "heptalophos",
-    "is_requester": true,
-    "auto_approve": false
+    "track":"python",
+    "exercise":"luhn",
+    "id":"636b38c3ebc5488cb55b0572c5221f15",
+    "url": "https://exercism.io/tracks/python/exercises/luhn/solutions/636b38c3ebc5488cb55b0572c5221f15",
+    "handle":"heptalophos",
+    "is_requester":true,
+    "auto_approve":false
 }
