@@ -9,8 +9,6 @@ def str8(dice):
         lgth += 1
     return lgth
     
-# Score categories
-# Change the values as you see fit
 YACHT = lambda dice: 50 if len(dice) == 5 and len(set(dice)) == 1 else 0
 ONES = counts(1)
 TWOS = counts(2)
