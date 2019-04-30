@@ -1,0 +1,11 @@
+============================= test session starts =============================
+platform win32 -- Python 3.7.0, pytest-3.8.0, py-1.6.0, pluggy-0.7.1
+rootdir: ~\exercism\python\secret-handshake, inifile:
+plugins: remotedata-0.3.0, openfiles-0.3.0, doctestplus-0.1.3, arraydiff-0.2
+collected 18 items
+
+secret_handshake_test.py ..sss......ssss...                              [100%]
+
+==================== 11 passed, 7 skipped in 0.07 seconds =====================
+
+
