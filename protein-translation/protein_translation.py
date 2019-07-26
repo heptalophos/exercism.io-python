@@ -10,12 +10,15 @@ CMap = (
     (('UGG',), 'Tryptophan'),
     (('UAA', 'UAG', 'UGA'), 'STOP'))
 
-codons = {codon: amino for codons, amino in CMap for codon in codons}
+codons = {codon: amino for codons, amino in CMap 
+                                   for codon in codons}
 
 
 def proteins(strand):
-    pchain = ["".join(c) for c in zip(*([iter(strand)] * 3))]
     return [aminoacid for aminoacid in list(
                 takewhile(lambda codon: codon != 'STOP',
-                                        [a for a in (codons[c]
-                                                     for c in pchain)]))]
+                            [aa for aa in (codons[cd]
+                               for cd in ["".join(nuc) 
+                                            for nuc in 
+                                         zip(*([iter(strand)] * 3))])
+                            ]))]
