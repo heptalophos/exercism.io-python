@@ -9,7 +9,7 @@ def verse(n):
     s = 's' if n > 1 else ''
     z = 's' if n != 2 else ''
     it = 'it' if n == 1 else 'one'
-    more = n - 1 if n - 1 > 0 else 'no more'
+    more = str(n - 1) * (n > 1) + 'no more' * ( n == 1)
     if n == 0:
         return ["No more bottles of beer on the wall, no more bottles of beer.",
                 ("Go to the store and buy some more, " 
