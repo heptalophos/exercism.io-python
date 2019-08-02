@@ -6,4 +6,4 @@
 .vscode/
 .vscode/*
 .idea/
-cleanup.ps1
+cleanup.*
