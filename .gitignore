@@ -3,8 +3,6 @@
 /../__pycache__/*
 *.pyc
 cleanup.*
-cleanup.ps1
-cleanup.sh
 .ionide/
 .vscode/
 .vscode/*
