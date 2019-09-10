@@ -1,2 +1,2 @@
 
-bash .\cleanup.sh
+sh ./cleanup.sh
