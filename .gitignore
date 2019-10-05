@@ -1,8 +1,9 @@
-/__pycache__
-/**/.pytest_cache/
-/../__pycache__/
-*.pyc
+.ionide/
+.vscode/
+.idea/
+/*/__pycache__/
+/*/.pytest_cache/
+/*/*.pyc
+/cleanup.ps1
+cleanup.sh
 cleanup.*
-.ionide
-.vscode
-.idea
