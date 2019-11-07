@@ -25,8 +25,8 @@ def primitive_triplets(number_in_triplet):
         raise ValueError('Side should be an even integer')
     triplets = set()
     for m in range(1, number_in_triplet//2 + 2):
-        for n in range(1, m+2):
-            if (number_in_triplet == 2*m*n ) and euclidean_conditions(m, n):
+        for n in range(1, m + 2):
+            if (number_in_triplet == 2 * m * n ) and euclidean_conditions(m, n):
                 possible = [square(m) - square(n), number_in_triplet, square(m) + square(n)]
                 if is_triplet(tuple(sorted(possible))):
                     triplets.add(tuple(sorted(possible)))
