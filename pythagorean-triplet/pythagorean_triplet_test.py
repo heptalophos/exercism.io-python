@@ -40,6 +40,7 @@ class PythagoreanTripletTest(unittest.TestCase):
             ],
         )
 
+    # @unittest.skip('skipped, until efficiently solved')
     def test_triplets_for_large_number(self):
         self.assertCountEqual(
             triplets_with_sum(30000),
