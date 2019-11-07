@@ -1,30 +1,19 @@
-# Pythagorean Triplet
+# Raindrops
 
-A Pythagorean triplet is a set of three natural numbers, {a, b, c}, for
-which,
+Your task is to convert a number into a string that contains raindrop sounds corresponding to certain potential factors. A factor is a number that evenly divides into another number, leaving no remainder. The simplest way to test if a one number is a factor of another is to use the [modulo operation](https://en.wikipedia.org/wiki/Modulo_operation).
 
-```text
-a**2 + b**2 = c**2
-```
+The rules of `raindrops` are that if a given number:
 
-and such that,
+- has 3 as a factor, add 'Pling' to the result.
+- has 5 as a factor, add 'Plang' to the result.
+- has 7 as a factor, add 'Plong' to the result.
+- _does not_ have any of 3, 5, or 7 as a factor, the result should be the digits of the number.
 
-```text
-a < b < c
-```
+## Examples
 
-For example,
-
-```text
-3**2 + 4**2 = 9 + 16 = 25 = 5**2.
-```
-
-Given an input integer N, find all Pythagorean triplets for which `a + b + c = N`.
-
-For example, with N = 1000, there is exactly one Pythagorean triplet for which `a + b + c = 1000`: `{200, 375, 425}`.
-
-*NOTE*: The description above mentions mathematical sets, but also that a Pythagorean Triplet {a, b, c} _must_ be ordered such that a < b < c (ascending order). This makes Python's `set` type unsuited to this exercise, since it is an inherently unordered container. Therefore please return a list of lists instead (i.e. `[[a, b, c]]`). You can generate the triplets themselves in whatever order you would like, as the enclosing list's order will be ignored in the tests.
-
+- 28 has 7 as a factor, but not 3 or 5, so the result would be "Plong".
+- 30 has both 3 and 5 as factors, but not 7, so the result would be "PlingPlang".
+- 34 is not factored by 3, 5, or 7, so the result would be "34".
 
 ## Exception messages
 
@@ -44,11 +33,11 @@ raise Exception("Meaningful message indicating the source of the error")
 
 To run the tests, run the appropriate command below ([why they are different](https://github.com/pytest-dev/pytest/issues/1629#issue-161422224)):
 
-- Python 2.7: `py.test pythagorean_triplet_test.py`
-- Python 3.4+: `pytest pythagorean_triplet_test.py`
+- Python 2.7: `py.test raindrops_test.py`
+- Python 3.4+: `pytest raindrops_test.py`
 
 Alternatively, you can tell Python to run the pytest module (allowing the same command to be used regardless of Python version):
-`python -m pytest pythagorean_triplet_test.py`
+`python -m pytest raindrops_test.py`
 
 ### Common `pytest` options
 
@@ -60,7 +49,7 @@ For other options, see `python -m pytest -h`
 
 ## Submitting Exercises
 
-Note that, when trying to submit an exercise, make sure the solution is in the `$EXERCISM_WORKSPACE/python/pythagorean-triplet` directory.
+Note that, when trying to submit an exercise, make sure the solution is in the `$EXERCISM_WORKSPACE/python/raindrops` directory.
 
 You can find your Exercism workspace by running `exercism debug` and looking for the line that starts with `Workspace`.
 
@@ -69,7 +58,7 @@ please see [Running the Tests](http://exercism.io/tracks/python/tests).
 
 ## Source
 
-Problem 9 at Project Euler [http://projecteuler.net/problem=9](http://projecteuler.net/problem=9)
+A variation on FizzBuzz, a famous technical interview question that is intended to weed out potential candidates. That question is itself derived from Fizz Buzz, a popular children's game for teaching division. [https://en.wikipedia.org/wiki/Fizz_buzz](https://en.wikipedia.org/wiki/Fizz_buzz)
 
 ## Submitting Incomplete Solutions
 
