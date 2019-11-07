@@ -2,13 +2,21 @@
 ## function solving the updated (different) exercise specification 
 def triplets_with_sum(number):
     triplets = []
-    for a in range(1, int(number / 3) + 1):
-        for b in range(a + 1, int(number / 2) + 1):
-            if square(a) + square(b) < number:
-                continue
-            possible = sorted([a, b, number - a - b])
-            if is_triplet(possible) and possible not in triplets:
-                triplets.append(possible)
+    a = b = c = 0 
+    m = 2
+    while a + b + c <= 6 * number:
+        for n in range(1, m):
+            a = square(m) - square(n)
+            b = 2 * m * n
+            c = square(m) + square(n)
+            if coprime(a, b) and  number % (a + b + c) == 0:
+                if within_range(a, b):
+                    a, b = b, a
+                triplet = list(map(lambda x: x * (number // (a + b + c)), 
+                                    [a, b, c]))
+                if not triplet in triplets:
+                    triplets.append(triplet)
+        m += 1
     return triplets
 
 
