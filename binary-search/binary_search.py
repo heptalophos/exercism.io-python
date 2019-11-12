@@ -1,4 +1,4 @@
-def binary_search(list_of_numbers, number):
+def find(list_of_numbers, number):
     low, high = 0, len(list_of_numbers) - 1
     while (high - low >= 0):
         mid = (low + high) // 2
@@ -8,4 +8,4 @@ def binary_search(list_of_numbers, number):
             low = mid + 1
         else:
             high = mid - 1
-    raise ValueError("{} not in `list_of_numbers`".format(number))
+    raise ValueError("{} cannot be found in list".format(number))
