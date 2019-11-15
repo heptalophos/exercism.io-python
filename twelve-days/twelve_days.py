@@ -17,14 +17,9 @@ GIFTS = [ 'a Partridge in a Pear Tree',
 PROLOGUE = 'On the __nth__ day of Christmas my true love gave to me: '
 
 def gifts(n):
-    gifts = []
-    if n > 0:
-        for gift in GIFTS[n:0:-1]:
-            gifts += [f'{gift},']
-        gifts += [f'and {GIFTS[0]}.']
-    else:
-        gifts += [f'{GIFTS[0]}.']
-    return gifts
+    gifts = [f'{gift},' for gift in GIFTS[n:0:-1]]
+    final = [f'and {GIFTS[0]}.' if n > 0 else f'{GIFTS[0]}.']
+    return [*gifts] + final
 
 def verse(n):
     return PROLOGUE.replace('__nth__', NTHDAY[n]) + ' '.join(*[gifts(n)]) 
