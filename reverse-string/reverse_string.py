@@ -1,2 +1,2 @@
-def reverse(input=''):
+def reverse(input = ''):
     return input[ : : -1 ]

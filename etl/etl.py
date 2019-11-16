@@ -4,4 +4,3 @@ def transform(legacy_data):
         for item in v:
             new_data[item.lower()] = k
     return new_data
-
