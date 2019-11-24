@@ -1,6 +1,6 @@
 def transform(legacy_data):
     new_data = {}
-    for k, v in legacy_data.items():
-        for item in v:
-            new_data[item.lower()] = k
+    for score, letters in legacy_data.items():
+        for letter in letters:
+            new_data[letter.lower()] = score
     return new_data
