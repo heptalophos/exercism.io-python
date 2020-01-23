@@ -1,4 +1,3 @@
-
 def distance(x, y):
     if len(x) != len(y) : 
         raise ValueError('DNA strands must be of equal length.')
