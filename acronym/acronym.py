@@ -1,9 +1,19 @@
-import re
+def abbreviate(sentence):
+    acronym = ''
+    for cap in acrogen(sentence):
+        acronym += cap
+    return acronym
 
-def abbreviate(words):
-    return ''.join(select_first(word) for word in re.split('\W+', words))
+def acrogen(sentence):
+    cur = ''
+    for nxt in sentence:
+        if boundary(cur, nxt):
+            yield nxt.upper()
+        cur = nxt
 
-def select_first(word):
-    return word[0].upper() + ''.join(letter for letter in word[1:] if letter.isupper()) \
-           if (not all(letter.isupper() for letter in word)) else word[0]
-
+def boundary(cur, nxt):
+    case = cur.islower() and nxt.isupper()
+    alpha = cur != "'" and \
+            nxt.isalpha() and \
+            not cur.isalpha()
+    return case or alpha
