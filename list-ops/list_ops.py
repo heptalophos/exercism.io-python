@@ -6,7 +6,7 @@ def concat(lists):
     return [x for xs in lists for x in xs]
 
 
-def filter_clone(function, xs):
+def filter(function, xs):
     return [x for x in xs if function(x)]
 
 
@@ -17,7 +17,7 @@ def length(xs):
     return count
 
 
-def map_clone(function, xs):
+def map(function, xs):
     return [function(x) for x in xs]
 
 
@@ -32,5 +32,4 @@ def foldr(function, xs, acc):
 
 
 def reverse(xs):
-    # return foldl(lambda x, result: append([x], result), xs, [])
     return xs[::-1]
