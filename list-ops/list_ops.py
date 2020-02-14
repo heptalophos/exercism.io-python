@@ -12,7 +12,7 @@ def filter(function, xs):
 
 def length(xs):
     count = 0
-    for x in xs:
+    for _ in xs:
         count += 1
     return count
 
@@ -28,7 +28,10 @@ def foldl(function, xs, acc):
 
 
 def foldr(function, xs, acc):
-    return foldl(lambda x, result: function(result, x), reverse(xs), acc)
+    return foldl(lambda x, result: 
+                 function(result, x), 
+                 reverse(xs), 
+                 acc)
 
 
 def reverse(xs):
