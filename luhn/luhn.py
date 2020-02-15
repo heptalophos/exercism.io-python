@@ -1,14 +1,17 @@
 class Luhn(object):
+    
     def __init__(self, card_num):
-        self.number = card_num.replace(" ", "")
-
-
-    def is_valid(self):
-        if (not self.number.isdigit()) or (len(self.number) <= 1):
+        self.num = card_num.replace(" ", "")
+    
+    def valid(self):
+        if (len(self.num) <= 1):
             return False
-        else:
-            digits = [int(self.number[i]) for i in reversed(range(len(self.number)))]
-            for i in range(len(digits)):
-                if i % 2 == 1:
-                    digits[i] = digits[i] * 2 if digits[i] * 2 < 9 else digits[i] * 2 - 9
-            return sum(digits) % 10 == 0
+        if (not self.num.isdigit()):
+            return False
+        digits = [int(d) 
+                  for d in str(self.num[::-1])]
+        for i in range(1, len(digits), 2):
+            digits[i] *= 2
+            if (digits[i] > 9):
+                digits[i] -= 9 
+        return sum(digits) % 10 == 0
