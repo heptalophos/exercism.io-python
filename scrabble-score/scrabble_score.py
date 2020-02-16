@@ -14,6 +14,7 @@ SCORES = {letter.upper(): score
 
 def score(word):
     if word.isalpha():
-        return sum(SCORES[c] for c in word.upper())
+        return sum(SCORES[c] 
+                   for c in word.upper())
     return 0
     
