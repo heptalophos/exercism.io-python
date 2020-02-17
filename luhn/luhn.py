@@ -4,12 +4,9 @@ class Luhn(object):
         self.num = card_num.replace(" ", "")
     
     def valid(self):
-        if (len(self.num) <= 1):
+        if (len(self.num) <= 1) or (not self.num.isdigit()):
             return False
-        if (not self.num.isdigit()):
-            return False
-        digits = [int(d) 
-                  for d in str(self.num[::-1])]
+        digits = [int(d) for d in str(self.num[::-1])]
         for i in range(1, len(digits), 2):
             digits[i] *= 2
             if (digits[i] > 9):
