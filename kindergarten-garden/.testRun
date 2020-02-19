@@ -9,3 +9,6 @@ test_multiple_students_for_the_same_garden_with_three_students (__main__.Kinderg
 Ran 6 tests in 0.016s
 
 OK
+
+
+>python -m pytest kindergarten_garden_test.py
