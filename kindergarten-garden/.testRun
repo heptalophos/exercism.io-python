@@ -11,4 +11,15 @@ Ran 6 tests in 0.016s
 OK
 
 
+
 >python -m pytest kindergarten_garden_test.py
+
+============================= test session starts =============================
+platform win32 -- Python 3.7.0, pytest-3.10.1, py-1.6.0, pluggy-0.13.0
+rootdir: ~\exercism\python\kindergarten-garden, inifile:
+plugins: arraydiff-0.2, doctestplus-0.1.3, openfiles-0.3.0, remotedata-0.3.0
+collected 11 items
+
+kindergarten_garden_test.py ...........                                  [100%]
+
+========================== 11 passed in 0.04 seconds ==========================
