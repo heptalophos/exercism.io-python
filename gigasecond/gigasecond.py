@@ -1,4 +1,4 @@
 from datetime import timedelta
 
-def add_gigasecond(d):
-    return d + timedelta(seconds = 1E9)
+def add(date):
+    return date + timedelta(seconds = 1E9)
