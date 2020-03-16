@@ -8,11 +8,12 @@ class Character:
         self.constitution = self.ability()
         self.intelligence = self.ability()
         self.wisdom = self.ability()
-        self.charisma = self.ability()
+        self.charisma = self.ability()        
         self.hitpoints = 10 + modifier(self.constitution)
 
     def ability(self):
-        return sum(sorted([randint(1,6) for x in range (4)])[3:])
+        return sum(sorted([randint(1,6) 
+                           for x in range (4)])[3:])
 
 def modifier(constitution):
     return (constitution - 10) // 2
