@@ -12,13 +12,14 @@ def shout(text):
 def question(text):
     return text.endswith('?')
 
-def hey(text):
+def response(text):
     text = normal(text)
     if silent(text):
         return "Fine. Be that way!"
-    if not shout(text) and question(text):
-        return "Sure."
+    if shout(text) and question(text):
+        return "Calm down, I know what I'm doing!"
     if shout(text):
         return "Whoa, chill out!"
+    if question(text):
+        return "Sure."
     return "Whatever."
-
