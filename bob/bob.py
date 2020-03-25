@@ -1,16 +1,7 @@
-import re
-
-def normal(text):
-    return re.sub(r"([^A-Za-z0-9_?:) ])+",'', text).strip()
-
-def silent(text):
-    return text is None or text == ''
-
-def shout(text):
-    return text == text.upper() and re.search("[A-Z]+", text) 
-    
-def question(text):
-    return text.endswith('?')
+normal = lambda x : x.strip()
+silent = lambda x : not x
+shout = lambda x : x.isupper() 
+question = lambda x : x.endswith('?')
 
 def response(text):
     text = normal(text)
