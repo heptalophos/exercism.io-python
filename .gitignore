@@ -7,3 +7,6 @@
 /cleanup.ps1
 cleanup.sh
 cleanup.*
+
+.fake
+.ionide
