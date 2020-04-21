@@ -1,4 +1,4 @@
-# Globals for the bearings
+# Globals for the directions
 # Change the values as you see fit
 NORTH = 0
 EAST = 1
@@ -14,32 +14,32 @@ class Robot(object):
         'A': 'advance',
     }
 
-    def __init__(self, bearing=NORTH, x=0, y=0):
-        self.bearing = bearing
+    def __init__(self, direction=NORTH, x=0, y=0):
+        self.direction = direction
         self.coordinates = (x, y)
 
     def turn_right(self):
-        self.bearing += 1
-        self.bearing %= 4
+        self.direction += 1
+        self.direction %= 4
 
     def turn_left(self):
-        self.bearing -= 1
-        self.bearing %= 4
+        self.direction -= 1
+        self.direction %= 4
      
     def advance(self):
         x, y = self.coordinates
-        if self.bearing == NORTH:
+        if self.direction == NORTH:
             self.coordinates = (x, y+1)  
-        if self.bearing == EAST:            
+        if self.direction == EAST:            
             self.coordinates = (x+1, y) 
-        if self.bearing == SOUTH:
+        if self.direction == SOUTH:
             self.coordinates = (x, y-1)  
-        if self.bearing == WEST:
+        if self.direction == WEST:
             self.coordinates = (x-1, y) 
-        if self.bearing not in [NORTH, EAST, SOUTH, WEST]:
-            raise Exeption("Invalid direction")
+        if self.direction not in [NORTH, EAST, SOUTH, WEST]:
+            raise Exception("Invalid bearing")
              
 
-    def simulate(self, commands):
+    def move(self, commands):
         for c in commands:
             getattr(self, Robot.valid_commands[c])()
