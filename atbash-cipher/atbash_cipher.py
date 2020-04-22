@@ -1,11 +1,13 @@
-from string import ascii_lowercase
+from string import ascii_lowercase as al
 
-translation = lambda text: text.translate(str.maketrans(ascii_lowercase, ascii_lowercase[::-1]))
+translation = lambda t : t.translate(str.maketrans(al, al[::-1]))
 
 def encode(plain_text):
-    # plain_text = sub(r'\W', '', plain_text)
-    cipher = translation(''.join([c for c in plain_text if c.isalnum()]).lower())
-    return " ".join([cipher[i:i + 5] for i in range(0, len(cipher), 5)])
+    enc = translation(''.join([c for c in plain_text 
+                                 if c.isalnum()]).lower())
+    return " ".join([enc[i:i + 5] 
+                    for i in range(0, len(enc), 5)])
 
-def decode(ciphered_text):
-    return translation(''.join([c for c in ciphered_text if c.isalnum()]).lower())
+def decode(cipher_text):
+    return translation(''.join([c for c in cipher_text 
+                                if c.isalnum()]).lower())
