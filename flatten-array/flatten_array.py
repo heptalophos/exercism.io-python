@@ -1,8 +1,8 @@
-def flatten(iterable):
+def flatten(lst):
     flat = []
-    for item in iterable:
-        if isinstance(item, (list, tuple)):
-            flat += flatten(item)
+    for item in lst:
+        if isinstance(item, list):
+            flat.extend(flatten(item))
         elif item is not None:
             flat.append(item) 
         else:
