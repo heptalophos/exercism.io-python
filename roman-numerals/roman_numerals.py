@@ -13,9 +13,9 @@ ROMANS = {1:  "I",
           1000:"M",
          }
 
-def numeral(number):
+def roman(number):
     roman = ""
     for arabic in sorted(ROMANS.keys(), reverse=True):
         roman += ROMANS[arabic] * (number // arabic )
         number %= arabic
-    return roman  
+    return roman

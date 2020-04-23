@@ -13,7 +13,13 @@ in the input; the digits need not be *numerically consecutive*.
 For the input `'73167176531330624919225119674426574742355349194934'`,
 the largest product for a series of 6 digits is 23520.
 
-## Exception messages 😆
+Implementation note:
+In case of invalid inputs to the 'largest_product' function
+your program should raise a ValueError with a meaningful error message.
+Feel free to reuse your code from the 'series' exercise!
+
+
+## Exception messages
 
 Sometimes it is necessary to raise an exception. When you do this, you should include a meaningful error message to
 indicate what the source of the error is. This makes your code more readable and helps significantly with debugging. Not
@@ -29,12 +35,9 @@ raise Exception("Meaningful message indicating the source of the error")
 
 ## Running the tests
 
-To run the tests, run the appropriate command below ([why they are different](https://github.com/pytest-dev/pytest/issues/1629#issue-161422224)):
+To run the tests, run `pytest largest_series_product_test.py`
 
-- Python 2.7: `py.test largest_series_product_test.py`
-- Python 3.4+: `pytest largest_series_product_test.py`
-
-Alternatively, you can tell Python to run the pytest module (allowing the same command to be used regardless of Python version):
+Alternatively, you can tell Python to run the pytest module:
 `python -m pytest largest_series_product_test.py`
 
 ### Common `pytest` options
@@ -52,7 +55,7 @@ Note that, when trying to submit an exercise, make sure the solution is in the `
 You can find your Exercism workspace by running `exercism debug` and looking for the line that starts with `Workspace`.
 
 For more detailed information about running tests, code style and linting,
-please see the [help page](http://exercism.io/languages/python).
+please see [Running the Tests](http://exercism.io/tracks/python/tests).
 
 ## Source
 
