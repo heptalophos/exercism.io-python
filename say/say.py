@@ -1,52 +1,95 @@
-LITERALS = (
-    (1e9, 'billion'),
-    (1e6, 'million'),
-    (1e3, 'thousand'),
-    (100, 'hundred'),
-    (90, 'ninety'),
-    (80, 'eighty'),
-    (70, 'seventy'),
-    (60, 'sixty'),
-    (50, 'fifty'),
-    (40, 'forty'),
-    (30, 'thirty'),
-    (20, 'twenty'),
-    (19, 'nineteen'),
-    (18, 'eighteen'),
-    (17, 'seventeen'),
-    (16, 'sixteen'),
-    (15, 'fifteen'),
-    (14, 'fourteen'),
-    (13, 'thirteen'),
-    (12, 'twelve'),
-    (11, 'eleven'),
-    (10, 'ten'),
-    (9, 'nine'),
-    (8, 'eight'),
-    (7, 'seven'),
-    (6, 'six'),
-    (5, 'five'),
-    (4, 'four'),
-    (3, 'three'),
-    (2, 'two'),
-    (1, 'one')
-    )
+LITERALS = {1: 'one', 
+            2: 'two', 
+            3: 'three', 
+            4: 'four', 
+            5: 'five', 
+            6: 'six', 
+            7: 'seven', 
+            8: 'eight', 
+            9: 'nine', 
+            10: 'ten', 
+            11: 'eleven', 
+            12: 'twelve', 
+            13: 'thirteen', 
+            14: 'fourteen', 
+            15: 'fifteen', 
+            16: 'sixteen', 
+            17: 'seventeen', 
+            18: 'eighteen', 
+            19: 'nineteen', 
+            20: 'twenty', 
+            30: 'thirty', 
+            40: 'forty', 
+            50: 'fifty', 
+            60: 'sixty', 
+            70: 'seventy', 
+            80: 'eighty', 
+            90: 'ninety', 
+            100: 'hundred', 
+            1000: 'thousand', 
+            1000000: 'million'}
 
-def say_rec(number, prefix):
-    for num, word in LITERALS:
-        upper = number // num
-        lower = number % num
-        if upper == 0:
-            continue
-        suffix = '-' if num < 100 else ' and ' 
-        tail = lower and say_rec(lower, suffix) or ''
-        if num < 100:
-            return '{}{}{}'.format(prefix, word, tail)
-        head = say_rec(upper, prefix and ' ' or '')
-        return '{} {}{}'.format(head, word, tail)
-    return 'zero'
+
+def tens(num):
+    return num//10*10
+
+
+def hundreds(num):
+    return num//100*100
+
+
+def chunks(num, size=3):
+    return [int(str(num)[::-1][i:i+size][::-1]) 
+            for i in range(0, len(str(num)), size)]
+
+
+def say_chunk(num, acc=""):
+    if num == 0:
+        return acc
+    if 100 <= num < 1000:
+        acc += LITERALS[int(num // 100)] + " hundred"
+        num -= hundreds(num)
+        if num:
+            acc += " "
+    elif 20 < num < 100:
+        acc += LITERALS[tens(num)]
+        num -= tens(num)
+        if num:
+            acc += '-'
+    else:
+        acc += LITERALS[num]
+        num = 0
+    return say_chunk(num, acc) 
+
+
+def elucidate(lst):
+    out = ""
+    if 'billion' in lst:
+        out = lst['billion'] + " billion"
+    if 'million' in lst and lst['million']:
+        if out:
+            out += " "
+        out += lst['million'] + " million"
+    if 'thousand' in lst and lst['thousand']:
+        if out:
+            out += " "
+        out += lst['thousand'] + " thousand"
+    if lst['hundred']:
+        if out:
+            out += " "
+            if 'hundred' not in lst or not lst['thousand']:
+                out += " "
+        out += lst['hundred']
+         
+    return out
+
 
 def say(number):
-    if number < 0 or number >= 1e12:
-        raise AttributeError
-    return say_rec(number, '')
+    number = int(number)
+    if number == 0:
+        return "zero"
+    elif number < 0 or number >= 1e12:
+        raise ValueError("Number out of range")
+    lst = [say_chunk(n) for n in chunks(number)]
+    lst = dict(zip(['hundred', 'thousand', 'million', 'billion'], lst))
+    return elucidate(lst)
