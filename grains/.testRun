@@ -1,6 +1,3 @@
-
-
-
 >python -m pytest grains_test.py
 
 ============================= test session starts =============================
