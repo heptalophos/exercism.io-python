@@ -30,13 +30,18 @@ LITERALS = {1: 'one',
             1000000: 'million'}
 
 
-tens = lambda n: n//10*10
+def tens(num):
+    return num//10*10
 
-hundreds = lambda n: n//100*100
+
+def hundreds(num):
+    return num//100*100
+
 
 def chunks(num, size=3):
     return [int(str(num)[::-1][i:i+size][::-1]) 
             for i in range(0, len(str(num)), size)]
+
 
 def say_chunk(num, acc=""):
     if num == 0:
@@ -56,6 +61,7 @@ def say_chunk(num, acc=""):
         num = 0
     return say_chunk(num, acc) 
 
+
 def elucidate(lst):
     out = ""
     if 'billion' in lst:
@@ -74,6 +80,7 @@ def elucidate(lst):
             if 'hundred' not in lst or not lst['thousand']:
                 out += " "
         out += lst['hundred']
+         
     return out
 
 
@@ -83,11 +90,6 @@ def say(number):
         return "zero"
     elif number < 0 or number >= 1e12:
         raise ValueError("Number out of range")
-    lst = [say_chunk(n) 
-           for n in chunks(number)]
-    lst = dict(zip(['hundred', 
-                    'thousand', 
-                    'million', 
-                    'billion'], 
-               lst))
+    lst = [say_chunk(n) for n in chunks(number)]
+    lst = dict(zip(['hundred', 'thousand', 'million', 'billion'], lst))
     return elucidate(lst)
