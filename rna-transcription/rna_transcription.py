@@ -1,10 +1,19 @@
 import re
 
-TRANSCRIPTION = {'G': 'C', 'C': 'G', 'T': 'A', 'A': 'U'}
+RNA_TRANSCRIPTION = {'G': 'C', 
+                     'C': 'G', 
+                     'T': 'A', 
+                     'A': 'U'}
 
 def isDna(seq):
-    return True if re.match("^[ACGT]+$", seq) else False
+    if re.match("^[ACGT]+$", seq):
+        return True
+    else: 
+        return False
 
 def to_rna(dnaseq):
-    return ''.join(TRANSCRIPTION[nucl] 
-                   for nucl in dnaseq) if isDna(dnaseq) else ""
+    if isDna(dnaseq):
+        return ''.join(RNA_TRANSCRIPTION[nucl] 
+                       for nucl in dnaseq) 
+    else: 
+        return ""
