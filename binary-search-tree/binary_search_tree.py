@@ -6,7 +6,9 @@ class TreeNode(object):
 
     def __str__(self):
         fmt = 'TreeNode(data={}, left={}, right={})'
-        return fmt.format(self.data, self.left, self.right)
+        return fmt.format(self.data, \
+                          self.left, \
+                          self.right)
 
 
 class BinarySearchTree(object):
@@ -23,7 +25,9 @@ class BinarySearchTree(object):
             if node is None:
                 return []
             else:
-                return sorted(node.left) + [node.data] + sorted(node.right)
+                return sorted(node.left) + \
+                       [node.data] + \
+                       sorted(node.right)
         return sorted(self.root)
 
     def insert(self, node, elem):

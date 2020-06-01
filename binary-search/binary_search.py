@@ -8,4 +8,4 @@ def find(list_of_numbers, number):
             low = mid + 1
         else:
             high = mid - 1
-    raise ValueError("{} cannot be found in list".format(number))
+    raise ValueError(f'{number} cannot be found in list')
