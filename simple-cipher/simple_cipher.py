@@ -1,7 +1,7 @@
 import random
 import string
 
-alphabet = string.ascii_lowercase
+al = string.ascii_lowercase
 
 class Cipher(object):
 
@@ -14,12 +14,12 @@ class Cipher(object):
 
     def encode(self, text):
         return "".join(
-            alphabet[(alphabet.index(text[i]) + 
-                      alphabet.index(self.key[i % len(self.key)])) % 26] 
+            al[(al.index(text[i]) + 
+                al.index(self.key[i % len(self.key)])) % 26] 
             for i in range(len(text)))
 
     def decode(self, text):
         return "".join(
-            alphabet[(alphabet.index(text[i]) - 
-                      alphabet.index(self.key[i % len(self.key)])) % 26] 
+            al[(al.index(text[i]) - 
+                al.index(self.key[i % len(self.key)])) % 26] 
             for i in range(len(text)))
