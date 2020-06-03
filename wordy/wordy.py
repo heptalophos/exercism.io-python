@@ -35,7 +35,6 @@ def answer(question):
     except:
             raise ValueError('invalid sequence' 
                              'of operands')
-    return reduce (lambda num, op: 
-                   op(num), 
+    return reduce (lambda num, op: op(num), 
                    curries, 
                    int(tokens[0]))
