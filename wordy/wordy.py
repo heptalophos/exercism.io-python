@@ -21,7 +21,8 @@ def answer(question):
     tokens = [t for t 
                 in question.split(' ') if t != 'by']
     if len(tokens) == 0:
-       raise ValueError('invalid question: no numbers here') 
+       raise ValueError('invalid question:' 
+                        'no numbers here') 
     if len(tokens) == 1:
         return int(tokens[0])
     try:
@@ -32,7 +33,8 @@ def answer(question):
             raise ValueError('invalid question:'
                              ' operands not matched')
     except:
-            raise ValueError('invalid sequence of operands')
+            raise ValueError('invalid sequence' 
+                             'of operands')
     return reduce (lambda num, op: 
                    op(num), 
                    curries, 
