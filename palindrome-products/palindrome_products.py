@@ -1,6 +1,3 @@
-def palindrome(n):
-    return str(n) == str(n)[::-1]
-
 def pairs(n, minf, maxf):
     for i in range(minf, maxf + 1):
         if n % i == 0:
@@ -8,9 +5,9 @@ def pairs(n, minf, maxf):
                 yield i, n // i
 
 def first(minf, maxf, dir):
-    if dir != -1:
-        possible = range(minf ** 2, maxf ** 2 + 1)
-    else:
+    palindrome = lambda x : str(x) == str(x)[::-1]
+    possible = range(minf ** 2, maxf ** 2 + 1)
+    if dir == -1:
         possible = range(maxf ** 2, minf ** 2 + 1, -1)
     for p in filter(palindrome, possible):
         for i in range(minf, maxf + 1):
