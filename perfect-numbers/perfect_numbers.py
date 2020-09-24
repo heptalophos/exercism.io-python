@@ -5,7 +5,7 @@ def pfactors(number):
     for i in range(2, number + 1):
         if number % i == 0:
             yield i 
-            yield from pfactors(number // k)
+            yield from pfactors(number // i)
                  
 def aliquot(number):
     return number == sum(pfactors(number))
