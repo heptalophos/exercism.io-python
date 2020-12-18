@@ -8,9 +8,9 @@ SCORES = {
     10: 'qz',
     }
 
-SCORES = {letter.upper(): score
-         for score in SCORES
-         for letter in SCORES[score]}
+SCORES = { letter.upper(): score
+           for score in SCORES
+           for letter in SCORES[score] }
 
 def score(word):
     if word.isalpha():

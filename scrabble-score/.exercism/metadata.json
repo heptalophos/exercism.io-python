@@ -1,9 +1,9 @@
 {
-  "track": "python",
-  "exercise": "scrabble-score",
-  "id": "204299a1344a4a3cb2c07fba7f76d28a",
-  "url": "https://exercism.io/tracks/python/exercises/scrabble-score/solutions/204299a1344a4a3cb2c07fba7f76d28a",
-  "handle": "heptalophos",
-  "is_requester": true,
-  "auto_approve": false
+    "track": "python",
+    "exercise": "scrabble-score",
+    "id": "204299a1344a4a3cb2c07fba7f76d28a",
+    "url": "https://exercism.io/tracks/python/exercises/scrabble-score/solutions/204299a1344a4a3cb2c07fba7f76d28a",
+    "handle": "heptalophos",
+    "is_requester": true,
+    "auto_approve": false
 }
