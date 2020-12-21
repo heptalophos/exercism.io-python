@@ -1,19 +1,20 @@
 def abbreviate(sentence):
     acronym = ''
-    for cap in acrogen(sentence):
-        acronym += cap
+    for capital in acrogen(sentence):
+        acronym += capital
     return acronym
 
 def acrogen(sentence):
-    cur = ''
-    for nxt in sentence:
-        if boundary(cur, nxt):
-            yield nxt.upper()
-        cur = nxt
+    current = ''
+    for next in sentence:
+        if boundary(current, next):
+            yield next.upper()
+        current = next
 
-def boundary(cur, nxt):
-    case = cur.islower() and nxt.isupper()
-    alpha = cur != "'" and \
-            nxt.isalpha() and \
-            not cur.isalpha()
+def boundary(current, next):
+    case = current.islower() and \
+           next.isupper()
+    alpha = current != "'" and \
+            next.isalpha() and \
+            not current.isalpha()
     return case or alpha
