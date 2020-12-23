@@ -1,9 +1,9 @@
 {
-  "track": "python",
-  "exercise": "grade-school",
-  "id": "9bd76e3271794908a02b29a78577d0cf",
-  "url": "https://exercism.io/tracks/python/exercises/grade-school/solutions/9bd76e3271794908a02b29a78577d0cf",
-  "handle": "heptalophos",
-  "is_requester": true,
-  "auto_approve": false
+    "track":"python",
+    "exercise":"grade-school",
+    "id":"9bd76e3271794908a02b29a78577d0cf",
+    "url":"https://exercism.io/tracks/python/exercises/grade-school/solutions/9bd76e3271794908a02b29a78577d0cf",
+    "handle":"heptalophos",
+    "is_requester":true,
+    "auto_approve":false
 }
