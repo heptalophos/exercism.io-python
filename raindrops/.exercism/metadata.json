@@ -1,9 +1,9 @@
 {
-  "track": "python",
-  "exercise": "raindrops",
-  "id": "eb86bac0b2684df382a7c0e3776b3010",
-  "url": "https://exercism.io/tracks/python/exercises/raindrops/solutions/eb86bac0b2684df382a7c0e3776b3010",
-  "handle": "heptalophos",
-  "is_requester": true,
-  "auto_approve": false
+    "track": "python",
+    "exercise": "raindrops",
+    "id": "eb86bac0b2684df382a7c0e3776b3010",
+    "url": "https://exercism.io/tracks/python/exercises/raindrops/solutions/eb86bac0b2684df382a7c0e3776b3010",
+    "handle": "heptalophos",
+    "is_requester": true,
+    "auto_approve": false
 }
