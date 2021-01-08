@@ -2,7 +2,7 @@ import unittest
 
 from pythagorean_triplet import triplets_with_sum
 
-# Tests adapted from `problem-specifications//canonical-data.json` @ v1.0.0
+# Tests adapted from `problem-specifications//canonical-data.json`
 
 # Python 2/3 compatibility
 if not hasattr(unittest.TestCase, "assertCountEqual"):
@@ -40,7 +40,6 @@ class PythagoreanTripletTest(unittest.TestCase):
             ],
         )
 
-    # @unittest.skip('skipped, until efficiently solved')
     def test_triplets_for_large_number(self):
         self.assertCountEqual(
             triplets_with_sum(30000),
