@@ -1,9 +1,9 @@
 {
-  "track": "python",
-  "exercise": "darts",
-  "id": "20fe78a3309c4d02864bf6b95f1b0d62",
-  "url": "https://exercism.io/tracks/python/exercises/darts/solutions/20fe78a3309c4d02864bf6b95f1b0d62",
-  "handle": "heptalophos",
-  "is_requester": true,
-  "auto_approve": false
+    "track": "python",
+    "exercise": "darts",
+    "id": "20fe78a3309c4d02864bf6b95f1b0d62",
+    "url": "https://exercism.io/tracks/python/exercises/darts/solutions/20fe78a3309c4d02864bf6b95f1b0d62",
+    "handle": "heptalophos",
+    "is_requester": true,
+    "auto_approve": false
 }

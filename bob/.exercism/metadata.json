@@ -1,9 +1,9 @@
 {
-  "track": "python",
-  "exercise": "bob",
-  "id": "1ec6038d329f46f389c5ca63e2c91197",
-  "url": "https://exercism.io/tracks/python/exercises/bob/solutions/1ec6038d329f46f389c5ca63e2c91197",
-  "handle": "heptalophos",
-  "is_requester": true,
-  "auto_approve": false
+    "track": "python",
+    "exercise": "bob",
+    "id": "1ec6038d329f46f389c5ca63e2c91197",
+    "url": "https://exercism.io/tracks/python/exercises/bob/solutions/1ec6038d329f46f389c5ca63e2c91197",
+    "handle": "heptalophos",
+    "is_requester": true,
+    "auto_approve": false
 }
