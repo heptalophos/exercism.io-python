@@ -1,9 +1,1 @@
-{
-  "track": "python",
-  "exercise": "isbn-verifier",
-  "id": "3770fbf57b8349c796e83c0ca51442c7",
-  "url": "https://exercism.io/tracks/python/exercises/isbn-verifier/solutions/3770fbf57b8349c796e83c0ca51442c7",
-  "handle": "heptalophos",
-  "is_requester": true,
-  "auto_approve": false
-}
+{"track":"python","exercise":"isbn-verifier","id":"3770fbf57b8349c796e83c0ca51442c7","url":"https://exercism.io/my/solutions/3770fbf57b8349c796e83c0ca51442c7","handle":"heptalophos","is_requester":true,"auto_approve":false}
