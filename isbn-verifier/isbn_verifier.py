@@ -9,5 +9,6 @@ def is_valid(isbn):
         return False
     countdown = list(range(10, 0, -1))
     csum = sum(int(d) * c  
-               for d, c in zip(digits, countdown))  
+               for d, c 
+               in zip(digits, countdown))  
     return  csum % 11 == 0
