@@ -1,8 +1,8 @@
 from __future__ import division
 class Rational(object):
     def __init__(self, numer, denom):
-        self.numer, self.denom = Rational.lowest_form(numer, \
-                                                      denom)
+        self.numer, self.denom = \
+            Rational.lowest_form(numer, denom)
 
     def __eq__(self, other):
         if isinstance(other, Rational):
@@ -35,7 +35,8 @@ class Rational(object):
                         self.denom * other.numer)
 
     def __abs__(self):
-        return  Rational(abs(self.numer), abs(self.denom))
+        return  Rational(abs(self.numer), \
+                         abs(self.denom))
 
     def __pow__(self, power):
         if power >= 0 or isinstance(power, float):
@@ -53,7 +54,8 @@ class Rational(object):
     @staticmethod
     def lowest_form (numer, denom):
         if denom == 0:
-            raise ValueError("Denominator cannot be zero")
+            raise ValueError(
+                "Denominator cannot be zero")
         return (numer / Rational.gcd(numer, denom), \
                 denom / Rational.gcd(numer, denom)) 
 
