@@ -1,9 +1,9 @@
 {
-  "track": "python",
-  "exercise": "yacht",
-  "id": "d51629275377440f8c9556905fc84d02",
-  "url": "https://exercism.io/tracks/python/exercises/yacht/solutions/d51629275377440f8c9556905fc84d02",
-  "handle": "heptalophos",
-  "is_requester": true,
-  "auto_approve": false
+    "track": "python",
+    "exercise": "yacht",
+    "id": "d51629275377440f8c9556905fc84d02",
+    "url": "https://exercism.io/tracks/python/exercises/yacht/solutions/d51629275377440f8c9556905fc84d02",
+    "handle": "heptalophos",
+    "is_requester": true,
+    "auto_approve": false
 }
