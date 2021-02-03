@@ -1,18 +1,16 @@
-def pfactors(number):
-    if number == 1:
-        yield 1
-        return
-    for i in range(2, number + 1):
+def factors(number):
+    for i in range(1, int(number / 2) + 1):
         if number % i == 0:
             yield i 
-            yield from pfactors(number // i)
-                 
-def aliquot(number):
-    return number == sum(pfactors(number))
+
+aliquot = lambda number: sum(factors(number))
 
 def classify(number):
     if (number < 1):
-        raise ValueError("Not a natural")
-    return "abundant" if aliquot(number) > number \
-            else "perfect" if aliquot(number) == number \
-            else "deficient"
+        raise ValueError("Not a natural number")
+    if number > aliquot(number):
+        return "deficient"
+    elif number < aliquot(number):
+        return "abundant"
+    else:
+        return "perfect"
