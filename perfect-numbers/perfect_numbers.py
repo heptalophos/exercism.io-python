@@ -10,7 +10,6 @@ def classify(number):
         raise ValueError("Not a natural number")
     if number - aliquot(number) > 0:
         return "deficient"
-    elif number - aliquot(number) < 0:
+    if number - aliquot(number) < 0:
         return "abundant"
-    else:
-        return "perfect"
+    return "perfect"
