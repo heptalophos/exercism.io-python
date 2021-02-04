@@ -8,9 +8,9 @@ aliquot = lambda number: sum(factors(number))
 def classify(number):
     if (number < 1):
         raise ValueError("Not a natural number")
-    if number > aliquot(number):
+    if number - aliquot(number) > 0:
         return "deficient"
-    elif number < aliquot(number):
+    elif number - aliquot(number) < 0:
         return "abundant"
     else:
         return "perfect"
