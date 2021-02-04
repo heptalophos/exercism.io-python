@@ -9,3 +9,17 @@ collected 13 items
 perfect_numbers_test.py .............                                    [100%]
 
 ========================= 13 passed in 15.53 seconds ==========================
+
+
+
+>python -m pytest perfect_numbers_test.py
+
+============================= test session starts =============================
+platform win32 -- Python 3.7.0, pytest-3.10.1, py-1.6.0, pluggy-0.13.0
+rootdir: C:\Users\Chris\exercism\python\perfect-numbers, inifile:
+plugins: arraydiff-0.2, doctestplus-0.1.3, openfiles-0.3.0, remotedata-0.3.0
+collected 13 items
+
+perfect_numbers_test.py .............                                    [100%]
+
+========================= 13 passed in 21.75 seconds ==========================
