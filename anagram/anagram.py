@@ -3,6 +3,8 @@ def find_anagrams(word, candidates):
     detect which candidates 
     are anagrams of word
     """
-    return [candidate for candidate in candidates 
-            if sorted(candidate.lower()) == sorted(word.lower())
-               and candidate.lower() != word.lower()]
+    normalized = lambda x: sorted(x.lower())
+    anagrams = [cand for cand in candidates 
+                if normalized(cand) == normalized(word)
+                and cand.lower() != word.lower()]
+    return anagrams
