@@ -1,26 +1,23 @@
 class Allergies(object):
 
-    allergies = [ 
-        "eggs",
-        "peanuts",
-        "shellfish",
-        "strawberries",
-        "tomatoes",
-        "chocolate",
-        "pollen",
-        "cats"
-        ]   
+    allergies = [ 'eggs', 
+                  'peanuts',
+                  'shellfish', 
+                  'strawberries', 
+                  'tomatoes', 
+                  'chocolate', 
+                  'pollen', 
+                  'cats' 
+                ]
 
     def __init__(self, score):
         self.score = score
 
     def allergic_to(self, item):
-        if self.score & 1 << self.allergies.index(item) >= 1:
+        allergen = self.allergies.index(item) 
+        if self.score & 1 << allergen >= 1:
             return True
-        elif self.score & 1 << self.allergies.index(item) == 0:
-            return False
-        else:
-            return self.score & 1 << self.allergies.index(item)
+        return False
 
     @property
     def lst(self):
