@@ -1,6 +1,6 @@
 def transform(legacy_data):
-    new_data = {}
+    shiny_new = {}
     for score, letters in legacy_data.items():
         for letter in letters:
-            new_data[letter.lower()] = score
-    return new_data
+            shiny_new[letter.lower()] = score
+    return shiny_new
