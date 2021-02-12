@@ -1,9 +1,9 @@
 {
-  "track": "python",
-  "exercise": "difference-of-squares",
-  "id": "43c94d8ee52f41419aeaa05f87195412",
-  "url": "https://exercism.io/tracks/python/exercises/difference-of-squares/solutions/43c94d8ee52f41419aeaa05f87195412",
-  "handle": "heptalophos",
-  "is_requester": true,
-  "auto_approve": false
+    "track": "python",
+    "exercise": "difference-of-squares",
+    "id": "43c94d8ee52f41419aeaa05f87195412",
+    "url": "https://exercism.io/tracks/python/exercises/difference-of-squares/solutions/43c94d8ee52f41419aeaa05f87195412",
+    "handle": "heptalophos",
+    "is_requester": true,
+    "auto_approve": false
 }

@@ -1,5 +1,5 @@
 def square_of_sum(count):
-    return (count * (count + 1) / 2) ** 2
+    return sum( i for i in range(count + 1)) ** 2
 
 def sum_of_squares(count):
     return sum( i**2 for i in range(count + 1))

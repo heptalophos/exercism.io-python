@@ -46,7 +46,6 @@ Alternatively, you can tell Python to run the pytest module:
 For other options, see `python -m pytest -h`
 
 ## Submitting Exercises
-
 Note that, when trying to submit an exercise, make sure the solution is in the `$EXERCISM_WORKSPACE/python/difference-of-squares` directory.
 
 You can find your Exercism workspace by running `exercism debug` and looking for the line that starts with `Workspace`.
@@ -55,9 +54,7 @@ For more detailed information about running tests, code style and linting,
 please see [Running the Tests](http://exercism.io/tracks/python/tests).
 
 ## Source
-
 Problem 6 at Project Euler [http://projecteuler.net/problem=6](http://projecteuler.net/problem=6)
 
 ## Submitting Incomplete Solutions
-
 It's possible to submit an incomplete solution so you can see how others have completed the exercise.
