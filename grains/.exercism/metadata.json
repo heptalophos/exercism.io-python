@@ -1,9 +1,9 @@
 {
-  "track": "python",
-  "exercise": "grains",
-  "id": "c2891b2deea84804b3f857154de336f0",
-  "url": "https://exercism.io/tracks/python/exercises/grains/solutions/c2891b2deea84804b3f857154de336f0",
-  "handle": "heptalophos",
-  "is_requester": true,
-  "auto_approve": false
+    "track": "python",
+    "exercise": "grains",
+    "id": "c2891b2deea84804b3f857154de336f0",
+    "url": "https://exercism.io/tracks/python/exercises/grains/solutions/c2891b2deea84804b3f857154de336f0",
+    "handle": "heptalophos",
+    "is_requester": true,
+    "auto_approve": false
 }
