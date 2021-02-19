@@ -1,6 +1,4 @@
-#
-# Skeleton file for the Python "Hello World" exercise.
-#
+# Solution for the Python "Hello World" exercise.
 
 def isBlank(str=None):
     return True if ((str is None) or (str == '')) else False 

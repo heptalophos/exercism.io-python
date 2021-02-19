@@ -14,4 +14,4 @@ def square(integer_number):
 
 def total():
     return (1 << 64) - 1
-
+    

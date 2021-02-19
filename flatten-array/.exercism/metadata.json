@@ -1,9 +1,9 @@
 {
-  "track": "python",
-  "exercise": "flatten-array",
-  "id": "0f10549ee6d148fc958e0167a4e0b029",
-  "url": "https://exercism.io/tracks/python/exercises/flatten-array/solutions/0f10549ee6d148fc958e0167a4e0b029",
-  "handle": "heptalophos",
-  "is_requester": true,
-  "auto_approve": false
+    "track": "python",
+    "exercise": "flatten-array",
+    "id": "0f10549ee6d148fc958e0167a4e0b029",
+    "url": "https://exercism.io/tracks/python/exercises/flatten-array/solutions/0f10549ee6d148fc958e0167a4e0b029",
+    "handle": "heptalophos",
+    "is_requester": true,
+    "auto_approve": false
 }
