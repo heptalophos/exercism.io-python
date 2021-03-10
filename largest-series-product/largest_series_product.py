@@ -4,7 +4,8 @@ from functools import reduce
 errors = [ 
     "Series size cannot be negative",
     "String should contain only digits",
-    "Series size cannot be larger than containing string's length"
+    "Series size cannot be larger than" +
+    " (containing) string's length"
     ]
 
 def largest_product(series, size):

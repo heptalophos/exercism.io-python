@@ -1,9 +1,9 @@
 {
-  "track": "python",
-  "exercise": "largest-series-product",
-  "id": "f91de1ad0ec34a71af4d2e00e95b6aec",
-  "url": "https://exercism.io/tracks/python/exercises/largest-series-product/solutions/f91de1ad0ec34a71af4d2e00e95b6aec",
-  "handle": "heptalophos",
-  "is_requester": true,
-  "auto_approve": false
+    "track": "python",
+    "exercise": "largest-series-product",
+    "id": "f91de1ad0ec34a71af4d2e00e95b6aec",
+    "url": "https://exercism.io/tracks/python/exercises/largest-series-product/solutions/f91de1ad0ec34a71af4d2e00e95b6aec",
+    "handle": "heptalophos",
+    "is_requester": true,
+    "auto_approve": false
 }
