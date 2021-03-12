@@ -1,15 +1,18 @@
-def factors(number):
-    for i in range(1, int(number / 2) + 1):
-        if number % i == 0:
-            yield i 
+def factors(n):
+    yield 1    
+    for x in range(2, int(n ** 0.5) + 1):
+        if n % x == 0:
+            yield x
+            if x ** 2 < n:
+                yield n // x
 
-aliquot = lambda number: sum(factors(number))
+aliquot = lambda n: 0 if n == 1 else sum(factors(n))
 
-def classify(number):
-    if (number < 1):
+def classify(n):
+    if (n < 1):
         raise ValueError("Not a natural number")
-    if number - aliquot(number) > 0:
-        return "deficient"
-    if number - aliquot(number) < 0:
-        return "abundant"
-    return "perfect"
+    if n - aliquot(n) > 0:
+        return 'deficient'
+    if n - aliquot(n) < 0:
+        return 'abundant'
+    return 'perfect'
