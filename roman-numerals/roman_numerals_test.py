@@ -25,6 +25,9 @@ class RomanNumeralsTest(unittest.TestCase):
     def test_9_being_10_1_is_ix(self):
         self.assertEqual(roman(9), "IX")
 
+    def test_10_is_one_x(self):
+        self.assertEqual(roman(10), "X")
+
     def test_20_is_two_x_s(self):
         self.assertEqual(roman(27), "XXVII")
 
