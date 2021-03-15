@@ -15,8 +15,7 @@ ROMANS = {1:  "I",
 
 def roman(number):
     roman = ""
-    # for arabic in sorted(ROMANS.keys(), reverse=True):
-    for arabic in ROMANS.keys():
+    for arabic in sorted(ROMANS.keys(), reverse=True):
         roman += ROMANS[arabic] * (number // arabic)
         number %= arabic
     return roman
