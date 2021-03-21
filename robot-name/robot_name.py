@@ -16,4 +16,6 @@ class Robot(object):
         self.assigned_names.add(self.name)
 
     def generate_name(self):
-        return rc(ls) + rc(ls) + rc(ds) + rc(ds) + rc(ds) 
+        alphas = 2 * rc(ls)
+        numeric = 3 * rc(ds)
+        return alphas + numeric 
