@@ -21,3 +21,23 @@ collected 4 items
 robot_name_test.py ....                                                  [100%]
 
 ========================== 4 passed in 0.07 seconds ===========================
+
+
+
+>python -m pytest robot_name_test.py
+
+============================= test session starts =============================
+platform win32 -- Python 3.7.0, pytest-6.2.2, py-1.10.0, pluggy-0.13.0
+rootdir: C:\Users\Chris\exercism\python\robot-name
+plugins: hypothesis-6.6.0, arraydiff-0.3, astropy-header-0.1.2, cov-2.11.1, doctestplus-0.9.0, filter-subpackage-0.1.1, openfiles-0.5.0, remotedata-0.3.2
+collected 4 items
+
+robot_name_test.py ....                                                  [100%]
+
+============================== warnings summary ===============================
+..\..\..\..\..\Anaconda3\lib\site-packages\pyreadline\py3k_compat.py:8
+  C:\Anaconda3\lib\site-packages\pyreadline\py3k_compat.py:8: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated, and in 3.8 it will stop working
+    return isinstance(x, collections.Callable)
+
+-- Docs: https://docs.pytest.org/en/stable/warnings.html
+======================== 4 passed, 1 warning in 0.06s =========================
