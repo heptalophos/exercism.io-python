@@ -35,14 +35,11 @@ class Robot(object):
      
     def advance(self):
         x, y = self.coordinates
-        if self.direction == NORTH:
-            self.coordinates = (x, y+1)  
-        if self.direction == EAST:            
-            self.coordinates = (x+1, y) 
-        if self.direction == SOUTH:
-            self.coordinates = (x, y-1)  
-        if self.direction == WEST:
-            self.coordinates = (x-1, y) 
+        if self.direction == NORTH: y+= 1  
+        if self.direction == EAST:  x += 1 
+        if self.direction == SOUTH: y -= 1  
+        if self.direction == WEST:  x -= 1 
+        self.coordinates = (x, y)
         if self.direction not in [NORTH, EAST, SOUTH, WEST]:
             raise Exception("Invalid bearing")
              
