@@ -1,10 +1,13 @@
 def rotate(text, key):
-    return ''.join(rotation(c, key) for c in text)
+    return ''.join(shift(ch, key) for ch in text)
 
 
-def rotation(c, k):
+def shift(c, k):
     if c.islower():
-        return chr((ord(c) - ord('a') + k) % 26 + ord('a'))
+        return chr((diff(c, 'a') + k) % 26 + ord('a'))
     if c.isupper():
-        return chr((ord(c) - ord('A') + k) % 26 + ord('A'))
+        return chr((diff(c, 'A') + k) % 26 + ord('A'))
     return c
+
+# Aux
+diff = lambda c1, c2: ord(c1) - ord(c2)

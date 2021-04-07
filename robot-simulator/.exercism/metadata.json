@@ -1,9 +1,9 @@
 {
-  "track": "python",
-  "exercise": "robot-simulator",
-  "id": "ed9283a181bf43299b2790cc1a00936f",
-  "url": "https://exercism.io/tracks/python/exercises/robot-simulator/solutions/ed9283a181bf43299b2790cc1a00936f",
-  "handle": "heptalophos",
-  "is_requester": true,
-  "auto_approve": false
+    "track": "python",
+    "exercise": "robot-simulator",
+    "id": "ed9283a181bf43299b2790cc1a00936f",
+    "url": "https://exercism.io/tracks/python/exercises/robot-simulator/solutions/ed9283a181bf43299b2790cc1a00936f",
+    "handle": "heptalophos",
+    "is_requester": true,
+    "auto_approve": false
 }
