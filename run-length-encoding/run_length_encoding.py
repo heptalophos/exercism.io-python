@@ -1,6 +1,7 @@
 from re import sub
 from itertools import groupby
 
+
 def decode(text):
     return sub(r'(\d+)(\D)', 
                lambda m: m.group(2) * int(m.group(1)), 
