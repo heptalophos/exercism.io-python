@@ -10,7 +10,7 @@ def decode(text):
 def encode(text):
    return ''.join(x if cnt <= 1 
                     else "%d%s" % (cnt, x) 
-                    for x, cnt 
-                    in map(lambda x: (x[0], 
-                                      len(list(x[1]))), 
-                                      groupby(text)))
+                  for x, cnt 
+             in map(lambda x: (x[0], 
+                               len(list(x[1]))), 
+                               groupby(text)))
