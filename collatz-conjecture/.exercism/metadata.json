@@ -1,9 +1,9 @@
 {
-  "track": "python",
-  "exercise": "collatz-conjecture",
-  "id": "cb05bcebc20347eeae82aef2eac35dec",
-  "url": "https://exercism.io/tracks/python/exercises/collatz-conjecture/solutions/cb05bcebc20347eeae82aef2eac35dec",
-  "handle": "heptalophos",
-  "is_requester": true,
-  "auto_approve": false
+    "track": "python",
+    "exercise": "collatz-conjecture",
+    "id": "cb05bcebc20347eeae82aef2eac35dec",
+    "url": "https://exercism.io/tracks/python/exercises/collatz-conjecture/solutions/cb05bcebc20347eeae82aef2eac35dec",
+    "handle": "heptalophos",
+    "is_requester": true,
+    "auto_approve": false
 }
