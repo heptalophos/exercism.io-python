@@ -38,7 +38,7 @@ def chunks(num, size=3):
     return [int(str(num)[::-1][i:i+size][::-1]) 
             for i in range(0, len(str(num)), size)]
 
-def say_chunk(num, acc=""):
+def lit_chunk(num, acc=""):
     if num == 0:
         return acc
     if 100 <= num < 1000:
@@ -54,7 +54,7 @@ def say_chunk(num, acc=""):
     else:
         acc += LITERALS[num]
         num = 0
-    return say_chunk(num, acc) 
+    return lit_chunk(num, acc) 
 
 def elucidate(lst):
     out = ""
@@ -76,14 +76,13 @@ def elucidate(lst):
         out += lst['hundred']
     return out
 
-
 def say(number):
     number = int(number)
     if number == 0:
         return "zero"
     elif number < 0 or number >= 1e12:
         raise ValueError("Number out of range")
-    lst = [say_chunk(n) 
+    lst = [lit_chunk(n) 
            for n in chunks(number)]
     lst = dict(zip(['hundred', 
                     'thousand', 
