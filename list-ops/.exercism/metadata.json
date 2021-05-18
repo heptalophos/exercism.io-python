@@ -1,9 +1,9 @@
 {
-  "track": "python",
-  "exercise": "list-ops",
-  "id": "c1fbb9c339214c1898a8c7e981595e6e",
-  "url": "https://exercism.io/tracks/python/exercises/list-ops/solutions/c1fbb9c339214c1898a8c7e981595e6e",
-  "handle": "heptalophos",
-  "is_requester": true,
-  "auto_approve": false
+    "track": "python",
+    "exercise": "list-ops",
+    "id": "c1fbb9c339214c1898a8c7e981595e6e",
+    "url": "https://exercism.io/tracks/python/exercises/list-ops/solutions/c1fbb9c339214c1898a8c7e981595e6e",
+    "handle": "heptalophos",
+    "is_requester": true,
+    "auto_approve": false
 }
