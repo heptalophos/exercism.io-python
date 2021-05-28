@@ -19,7 +19,7 @@ def curry(func, var):
 def answer(question):
     question = question.lstrip('What is').rstrip('?')
     tokens = [t for t 
-                in question.split(' ') if t != 'by']
+              in question.split(' ') if t != 'by']
     if len(tokens) == 0:
        raise ValueError('invalid question:' 
                         'no numbers here') 
@@ -36,5 +36,5 @@ def answer(question):
             raise ValueError('invalid sequence' 
                              'of operands')
     return reduce (lambda num, op: op(num), 
-                   curries, 
-                   int(tokens[0]))
+                                   curries, 
+                                   int(tokens[0]))
