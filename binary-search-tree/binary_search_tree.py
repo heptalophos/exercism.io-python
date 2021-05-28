@@ -1,15 +1,4 @@
-class TreeNode(object):
-    def __init__(self, data, left, right):
-        self.data = data
-        self.left = left
-        self.right = right
-
-    def __str__(self):
-        fmt = 'TreeNode(data={}, left={}, right={})'
-        return fmt.format(self.data, \
-                          self.left, \
-                          self.right)
-
+from tree_node import TreeNode
 
 class BinarySearchTree(object):
     def __init__(self, tree_data):
@@ -26,8 +15,8 @@ class BinarySearchTree(object):
                 return []
             else:
                 return sorted(node.left) + \
-                       [node.data] + \
-                       sorted(node.right)
+                             [node.data] + \
+                             sorted(node.right)
         return sorted(self.root)
 
     def insert(self, node, elem):
