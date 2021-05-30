@@ -8,7 +8,10 @@ class Luhn(object):
             return False
         digits = [int(d) for d in str(self.num[::-1])]
         for i in range(1, len(digits), 2):
-            digits[i] *= 2
-            if (digits[i] > 9):
-                digits[i] -= 9 
+            if (digits[i] < 5):
+                digits[i] *= 2
+            else: 
+                digits[i] *= 2
+                digits[i] -= 9
+                # digits[i] = 2 * digits[i] - 9 
         return sum(digits) % 10 == 0
