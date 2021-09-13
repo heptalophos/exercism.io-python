@@ -13,16 +13,14 @@ GIFTS = [ 'a Partridge in a Pear Tree',
           'ten Lords-a-Leaping',
           'eleven Pipers Piping',
           'twelve Drummers Drumming' ]
-  
-PROLOGUE = 'On the __nth__ day of Christmas my true love gave to me: '
 
 def gifts(n):
     gifts = [f'{gift},' for gift in GIFTS[n:0:-1]]
-    final = [f'and {GIFTS[0]}.' if n > 0 else f'{GIFTS[0]}.']
-    return [*gifts] + final
+    final = f' and {GIFTS[0]}.' if n > 0 else f'{GIFTS[0]}.'
+    return ' '.join(*[gifts]) + final
 
 def verse(n):
-    return PROLOGUE.replace('__nth__', NTHDAY[n]) + ' '.join(*[gifts(n)]) 
+    return f'On the {NTHDAY[n]} day of Christmas my true love gave to me: {gifts(n)}'
 
 def recite(start_verse, end_verse):
     return [verse(x - 1) for x in range(start_verse, end_verse + 1)]
