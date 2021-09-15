@@ -7,7 +7,7 @@
 /cleanup.ps1
 cleanup.sh
 cleanup.*
-pytest.ini
+# pytest.ini
 
 .fake
 .ionide
