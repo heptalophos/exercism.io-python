@@ -8,6 +8,7 @@
 cleanup.sh
 cleanup.*
 # pytest.ini
+HELP.md
 
 .fake
 .ionide
