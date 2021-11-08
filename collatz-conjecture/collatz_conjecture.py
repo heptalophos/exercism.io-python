@@ -1,6 +1,6 @@
 def steps(number):
     if number <= 0:
-        raise ValueError("not a natural number")
+        raise ValueError("Only positive numbers are allowed")
     _steps = 0
     while number != 1:
         if number % 2:
