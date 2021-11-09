@@ -1,10 +1,11 @@
 def valid_input(integer_number):
-    if (integer_number < 1) or (integer_number > 64):
+    if (integer_number < 1):
+        return False
+    if (integer_number > 64):
         return False
     return True
 
-ERROR = "Invalid input. Range is (1, 64)"
-
+ERROR = "square must be between 1 and 64"
 
 def square(integer_number):
     if valid_input(integer_number):
