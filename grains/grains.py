@@ -1,15 +1,13 @@
-def valid_input(integer_number):
-    if (integer_number < 1):
-        return False
-    if (integer_number > 64):
+def valid_input(int_number):
+    if (int_number < 1) or (int_number > 64):
         return False
     return True
 
 ERROR = "square must be between 1 and 64"
 
-def square(integer_number):
-    if valid_input(integer_number):
-        return 1 << integer_number - 1
+def square(int_number):
+    if valid_input(int_number):
+        return 1 << int_number - 1
     else:
         raise ValueError(ERROR)
 
