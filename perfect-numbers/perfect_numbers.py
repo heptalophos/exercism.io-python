@@ -10,7 +10,7 @@ aliquot = lambda n: 0 if n == 1 else sum(factors(n))
 
 def classify(n):
     if (n < 1):
-        raise ValueError("Not a natural number")
+        raise ValueError("Classification is only possible for positive integers.")
     if n - aliquot(n) > 0:
         return 'deficient'
     if n - aliquot(n) < 0:
