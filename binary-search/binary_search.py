@@ -8,4 +8,4 @@ def find(list_of_numbers, number):
             min = mid + 1
         else:
             max = mid - 1
-    raise ValueError(f'{number} cannot be found in list')
+    raise ValueError('value not in array')
