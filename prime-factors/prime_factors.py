@@ -1,13 +1,12 @@
 def factors(natural_number):
     factors = []
-    num = natural_number
-    sqrtn = lambda n: int(n ** 0.5)
-    for factor in range(2, sqrtn(num) + 1):
-        while num % factor == 0:
-            num //= factor
-            factors.append(factor)
-            if num == 1:
+    number = natural_number
+    for factor in range(2, int(number ** 0.5) + 1):
+        while number % factor == 0:
+            number //= factor
+            factors += [factor]
+            if number == 1:
                 break
-    if num != 1:
-        factors += [num]
+    if number != 1:
+        factors += [number]
     return factors
