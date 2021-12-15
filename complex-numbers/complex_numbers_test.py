@@ -1,9 +1,10 @@
-from __future__ import division
 import math
 
 import unittest
 
-from complex_numbers import ComplexNumber
+from complex_numbers import (
+    ComplexNumber,
+)
 
 # Tests adapted from `problem-specifications//canonical-data.json`
 
@@ -108,12 +109,12 @@ class ComplexNumbersTest(unittest.TestCase):
         self.assertEqual(abs(ComplexNumber(-5, 0)), 5)
 
     def test_absolute_value_of_a_purely_imaginary_number_with_positive_imaginary_part(
-        self
+        self,
     ):
         self.assertEqual(abs(ComplexNumber(0, 5)), 5)
 
     def test_absolute_value_of_a_purely_imaginary_number_with_negative_imaginary_part(
-        self
+        self,
     ):
         self.assertEqual(abs(ComplexNumber(0, -5)), 5)
 
@@ -146,6 +147,32 @@ class ComplexNumbersTest(unittest.TestCase):
         self.assertAlmostEqual(
             ComplexNumber(math.log(2), math.pi).exp(), ComplexNumber(-2, 0)
         )
+
+    # Operations between real numbers and complex numbers
+
+    def test_add_real_number_to_complex_number(self):
+        self.assertEqual(ComplexNumber(1, 2) + 5, ComplexNumber(6, 2))
+
+    def test_add_complex_number_to_real_number(self):
+        self.assertEqual(5 + ComplexNumber(1, 2), ComplexNumber(6, 2))
+
+    def test_subtract_real_number_from_complex_number(self):
+        self.assertEqual(ComplexNumber(5, 7) - 4, ComplexNumber(1, 7))
+
+    def test_subtract_complex_number_from_real_number(self):
+        self.assertEqual(4 - ComplexNumber(5, 7), ComplexNumber(-1, -7))
+
+    def test_multiply_complex_number_by_real_number(self):
+        self.assertEqual(ComplexNumber(2, 5) * 5, ComplexNumber(10, 25))
+
+    def test_multiply_real_number_by_complex_number(self):
+        self.assertEqual(5 * ComplexNumber(2, 5), ComplexNumber(10, 25))
+
+    def test_divide_complex_number_by_real_number(self):
+        self.assertAlmostEqual(ComplexNumber(10, 100) / 10, ComplexNumber(1, 10))
+
+    def test_divide_real_number_by_complex_number(self):
+        self.assertAlmostEqual(5 / ComplexNumber(1, 1), ComplexNumber(2.5, -2.5))
 
     # Additional tests for this track
 
