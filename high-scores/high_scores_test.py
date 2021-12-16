@@ -47,11 +47,13 @@ class HighScoresTest(unittest.TestCase):
         expected = [40]
         self.assertEqual(personal_top_three(scores), expected)
 
+    @unittest.skip("update exercise specification first")
     def test_latest_score_after_personal_top_scores(self):
         scores = [70, 50, 20, 30]
         expected = 30
         self.assertEqual(latest_after_top_three(scores), expected)
 
+    @unittest.skip("update exercise specification first")
     def test_scores_after_personal_top_scores(self):
         scores = [30, 50, 20, 70]
         expected = [30, 50, 20, 70]
