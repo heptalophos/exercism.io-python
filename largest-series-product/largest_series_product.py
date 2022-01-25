@@ -2,9 +2,9 @@ import re
 from functools import reduce
 
 errors = [ 
-    "Series size cannot be negative",
-    "String should contain only digits",
-    "Series size cannot be larger than containing string's length"
+    "span must be greater than zero",
+    "digits input must only contain digits",
+    "span must be smaller than string length"
     ]
 
 def largest_product(series, size):
