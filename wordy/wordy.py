@@ -38,3 +38,4 @@ def answer(question):
     return reduce (lambda num, op: op(num), 
                                    curries, 
                                    int(tokens[0]))
+    
