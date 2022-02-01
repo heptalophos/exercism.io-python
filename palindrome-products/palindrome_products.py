@@ -7,8 +7,6 @@ def pairs(n, minf, maxf):
 def first(minf, maxf, dir):
     palindrome = lambda x : str(x) == str(x)[::-1]
     possible = range(minf ** 2, maxf ** 2 + 1)
-    if minf > maxf:
-        raise ValueError("Invalid range.")
     if dir == -1:
         possible = range(maxf ** 2, minf ** 2 + 1, -1)
     for p in filter(palindrome, possible):
@@ -18,8 +16,11 @@ def first(minf, maxf, dir):
     return None, []
 
 def smallest(min_factor, max_factor):
+    if min_factor > max_factor: 
+        raise ValueError("min must be <= max")
     return first(min_factor, max_factor, 1)
 
 def largest(min_factor, max_factor):
+    if min_factor > max_factor: 
+        raise ValueError("min must be <= max")
     return first(min_factor, max_factor, -1)
-
