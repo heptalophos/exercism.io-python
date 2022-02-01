@@ -1,9 +1,1 @@
-{
-    "track": "python",
-    "exercise": "palindrome-products",
-    "id": "e43d3a7a0da04303bb96947c483ee9f1",
-    "url": "https://exercism.org/tracks/python/exercises/palindrome-products/solutions/heptalophos",
-    "handle": "heptalophos",
-    "is_requester": true,
-    "auto_approve": false
-}
+{"track":"python","exercise":"palindrome-products","id":"e43d3a7a0da04303bb96947c483ee9f1","url":"https://exercism.org/tracks/python/exercises/palindrome-products","handle":"heptalophos","is_requester":true,"auto_approve":false}
