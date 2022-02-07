@@ -40,18 +40,6 @@ def reactor_efficiency(voltage, current, theoretical_max_power):
 
     generated_power = voltage * current
     efficiency = 100 * (generated_power / theoretical_max_power)
-    # band = lambda x: efficiency >= x
-    # result = ""
-    # match band:
-    #     case 80:
-    #         result = "green"
-    #     case 60:
-    #         result = "orange"
-    #     case 30:
-    #         result = "red"
-    #     case 0:
-    #         result = "black"
-    # return result
     if efficiency >= 80:
         return "green"
     if efficiency >= 60:
