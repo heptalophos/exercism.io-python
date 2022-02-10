@@ -18,7 +18,11 @@ def sublist(l1, l2):
         for x in sup:
             ls.append(x)
             if list(ls) == sub:
-                return SUBLIST if sub == l1 else SUPERLIST
+                if sub == l1:
+                    return SUBLIST 
+                else: 
+                    return SUPERLIST
     except:
         return EQUAL
-    return UNEQUAL
+    finally:
+        return UNEQUAL
