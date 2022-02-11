@@ -1,6 +1,9 @@
 import unittest
 
-from run_length_encoding import encode, decode
+from run_length_encoding import (
+    encode,
+    decode,
+)
 
 # Tests adapted from `problem-specifications//canonical-data.json`
 
@@ -50,7 +53,3 @@ class RunLengthEncodingTest(unittest.TestCase):
 
     def test_encode_followed_by_decode_gives_original_string(self):
         self.assertMultiLineEqual(decode(encode("zzz ZZ  zZ")), "zzz ZZ  zZ")
-
-
-if __name__ == "__main__":
-    unittest.main()
