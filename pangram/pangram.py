@@ -1,11 +1,11 @@
 import re
 
-alpha = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
 def sanitized(text): 
     return re.sub(r'\W+|_|\d+', '', text)
 
 def is_pangram(text):
-    normalized = set(sanitized(text).lower() ) 
-    alphabet = set(alpha.lower())
-    return normalized == alphabet 
+    text_letters = set( sanitized(text).lower() ) 
+    alphabet = set( ALPHABET.lower() )
+    return text_letters == alphabet 
