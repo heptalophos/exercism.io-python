@@ -17,8 +17,9 @@ codons = {codon: aminoacid for codons,
 def proteins(strand):
     aminoacids = [a for a in (codons[c]
                     for c in ["".join(nuc) 
-                    for nuc in zip(*([iter(strand)] * 3))])]
+                              for nuc in zip(*([iter(strand)] * 3))])]
     return [aminoacid 
             for aminoacid in list(
-            takewhile(lambda codon: codon != 'STOP', 
-                      aminoacids))]
+                takewhile(
+                    lambda codon: codon != 'STOP', aminoacids)
+                )]
