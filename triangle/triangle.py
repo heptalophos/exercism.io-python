@@ -1,16 +1,10 @@
-triangle_inequality = lambda decorate: \
-                      lambda sides: \
-            2 * max(sides) < sum(sides) \
-            and decorate(sides)
+triangle_inequality = lambda sides: 2 * max(sides) < sum(sides)
 
-@triangle_inequality
 def equilateral(sides):
-    return len(set(sides)) == 1
+    return len(set(sides)) == 1 and triangle_inequality(sides)
 
-@triangle_inequality
 def isosceles(sides):
-    return len(set(sides)) <= 2
+    return len(set(sides)) <= 2 and triangle_inequality(sides)
 
-@triangle_inequality
 def scalene(sides):
-    return len(set(sides)) == 3
+    return len(set(sides)) == 3 and triangle_inequality(sides)
