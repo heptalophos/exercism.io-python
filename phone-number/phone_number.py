@@ -23,9 +23,5 @@ class PhoneNumber(object):
         self.area_code = self.number[:3]
 
     def pretty(self):
-        return '({})-{}-{}'.format(
-            self.area_code,
-            self.number[-7:-4], 
-            self.number[-4:]
-        )
+        return '({})-{}-{}'.format(self.area_code, self.number[-7:-4], self.number[-4:])
         
