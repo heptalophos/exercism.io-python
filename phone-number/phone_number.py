@@ -1,7 +1,14 @@
 class PhoneNumber(object):
+    
     def __init__(self, num):
         INVALID = '0' * 10
+        letters = [l for l in num if l.isalpha()]
+        punctuation = [p for p in num if p in "!@:"]
         digits = [d for d in num if d.isdigit()]
+        if punctuation:
+            raise ValueError("punctuations not permitted")
+        if letters:
+            raise ValueError("letters not permitted")
         if len(digits) < 10:
             raise ValueError("incorrect number of digits")
         if len(digits) > 11:
