@@ -1,9 +1,1 @@
-{
-    "track": "python",
-    "exercise": "little-sisters-vocab",
-    "id": "aa85887432a44e2887ab157f4d4c3d26",
-    "url": "https://exercism.org/tracks/python/exercises/little-sisters-vocab/solutions/aa85887432a44e2887ab157f4d4c3d26",
-    "handle": "heptalophos",
-    "is_requester": true,
-    "auto_approve": false
-}
+{"track":"python","exercise":"little-sisters-vocab","id":"aa85887432a44e2887ab157f4d4c3d26","url":"https://exercism.org/tracks/python/exercises/little-sisters-vocab","handle":"heptalophos","is_requester":true,"auto_approve":false}
