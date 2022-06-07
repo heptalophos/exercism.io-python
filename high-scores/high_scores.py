@@ -7,5 +7,5 @@ def personal_best(scores):
 def personal_top_three(scores):
     return sorted(scores, reverse=True)[:3]
 
-def latest_after_top_three(scores):
-    pass
+# def latest_after_top_three(scores):
+#     pass
