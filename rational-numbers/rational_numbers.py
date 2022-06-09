@@ -10,9 +10,6 @@ class Rational(object):
         else:
             return (self.numer / self.denom) == other
 
-    def __repr__(self):
-        return '{}/{}'.format(self.numer, self.denom)
-
     def __add__(self, other):
         return Rational(self.numer * other.denom + other.numer * self.denom, \
                         self.denom * other.denom)
@@ -46,7 +43,7 @@ class Rational(object):
     @staticmethod
     def lowest_form (numer, denom):
         if denom == 0:
-            raise ValueError("Denominator cannot be zero")
+            raise ValueError("Division by zero")
         return (numer / Rational.gcd(numer, denom), denom / Rational.gcd(numer, denom)) 
 
     @staticmethod
