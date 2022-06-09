@@ -1,4 +1,5 @@
 from __future__ import division
+
 class Rational(object):
     def __init__(self, numer, denom):
         self.numer, self.denom = Rational.lowest_form(numer, denom)
@@ -45,7 +46,7 @@ class Rational(object):
     @staticmethod
     def lowest_form (numer, denom):
         if denom == 0:
-            raise ValueError("Denominator cannot be zero")
+            raise ValueError("Division by zero")
         return (numer / Rational.gcd(numer, denom), denom / Rational.gcd(numer, denom)) 
 
     @staticmethod
