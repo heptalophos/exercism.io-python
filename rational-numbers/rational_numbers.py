@@ -1,4 +1,5 @@
 from __future__ import division
+
 class Rational(object):
     def __init__(self, numer, denom):
         self.numer, self.denom = Rational.lowest_form(numer, denom)
