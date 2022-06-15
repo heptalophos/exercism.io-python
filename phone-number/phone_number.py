@@ -14,10 +14,10 @@ class PhoneNumber(object):
         if len(digits) > 11:
             raise ValueError("more than 11 digits")
         if len(digits) == 11: 
-            if digits[0] != '1':
-                raise ValueError("11 digits must start with 1")
-            else:
+            if digits[0] == '1':
                 digits = digits[1:]
+            else:
+                raise ValueError("11 digits must start with 1")
         self.number = ''.join(digits[-10:]) or INVALID
         if self.number[0] == '0' :
             raise ValueError("area code cannot start with zero")
