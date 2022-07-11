@@ -10,8 +10,7 @@ def get_rounds(number):
     :param number: int - current round number.
     :return: list - current round and the two that follow.
     """
-    
-    return [number + i for i in range(0, 3)]
+    return [number + rnd for rnd in range(0, 3)]
 
 
 def concatenate_rounds(rounds_1, rounds_2):
@@ -21,7 +20,6 @@ def concatenate_rounds(rounds_1, rounds_2):
     :param rounds_2: list - second set of rounds played.
     :return: list - all rounds played.
     """
-    
     return rounds_1 + rounds_2 if rounds_1 != [] or rounds_2 != [] else []
 
 
@@ -32,9 +30,7 @@ def list_contains_round(rounds, number):
     :param number: int - round number.
     :return: bool - was the round played?
     """
-    
     return True if number in rounds else False
-
 
 def card_average(hand):
     """Calculate and returns the average card value from the list.
@@ -44,7 +40,6 @@ def card_average(hand):
     """
     return sum(hand) / len(hand)
 
-
 def approx_average_is_average(hand):
     """Return if an average is using (first + last index values ) OR ('middle' card) == calculated average.
 
@@ -53,7 +48,6 @@ def approx_average_is_average(hand):
     """
     return 2 * card_average(hand) == hand[0] + hand[-1] or card_average(hand) == hand[len(hand) // 2]
 
-
 def average_even_is_average_odd(hand):
     """Return if the (average of even indexed card values) == (average of odd indexed card values).
 
@@ -61,7 +55,6 @@ def average_even_is_average_odd(hand):
     :return: bool - are even and odd averages equal?
     """
     return card_average(hand[0::1]) == card_average(hand[1::2])
-
 
 def maybe_double_last(hand):
     """Multiply a Jack card value in the last index position by 2.

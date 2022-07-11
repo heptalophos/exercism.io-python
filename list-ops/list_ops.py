@@ -22,10 +22,7 @@ def foldl(function, xs, acc):
     return acc
 
 def foldr(function, xs, acc):
-    return foldl(lambda x, result: 
-                 function(result, x), 
-                 reverse(xs), 
-                 acc)
+    return foldl(lambda x, result: function(result, x), reverse(xs), acc)
 
 def reverse(xs):
     return xs[::-1]
