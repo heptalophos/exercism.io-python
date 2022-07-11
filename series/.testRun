@@ -1,3 +1,5 @@
+>python -m pytest series_test.py
+
 ============================= test session starts =============================
 platform win32 -- Python 3.6.0, pytest-3.5.1, py-1.5.3, pluggy-0.6.0
 rootdir: ~\exercism\python\series, inifile:
@@ -7,20 +9,6 @@ collected 7 items
 series_test.py .......                                                   [100%]
 
 ========================== 7 passed in 0.04 seconds ===========================
-
-
-
->python -m pytest series_test.py
-
-============================= test session starts =============================
-platform win32 -- Python 3.7.0, pytest-3.10.1, py-1.6.0, pluggy-0.13.0
-rootdir: ~\exercism\python\series, inifile:
-plugins: arraydiff-0.2, doctestplus-0.1.3, openfiles-0.3.0, remotedata-0.3.0
-collected 10 items
-
-series_test.py ..........                                                [100%]
-
-========================== 10 passed in 0.09 seconds ==========================
 
 
 
@@ -40,14 +28,18 @@ series_test.py ..........                                                [100%]
 
 
 
->python -m pytest >series_test.py
+>python -m pytest -o markers=task series_test.py
 
 ============================= test session starts =============================
 platform win32 -- Python 3.7.0, pytest-6.2.2, py-1.10.0, pluggy-0.13.0
+
 rootdir: ~\exercism\python, configfile: pytest.ini
-plugins: hypothesis-6.6.0, arraydiff-0.3, astropy-header-0.1.2, cov-2.11.1, doctestplus-0.9.0, filter-subpackage-0.1.1, openfiles-0.5.0, remotedata-0.3.2
+plugins: hypothesis-6.6.0, arraydiff-0.3, astropy-header-0.1.2, cov-2.11.1, 
+         doctestplus-0.9.0, filter-subpackage-0.1.1, openfiles-0.5.0, 
+         remotedata-0.3.2
+
 collected 10 items
 
 series_test.py ..........                                                [100%]
 
-============================= 10 passed in 0.53s ==============================
+============================= 10 passed in 0.05s ==============================
