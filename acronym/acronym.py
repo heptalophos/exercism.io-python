@@ -12,9 +12,6 @@ def acrogen(sentence):
         current = next
 
 def boundary(current, next):
-    case = current.islower() and \
-           next.isupper()
-    alpha = current != "'" and \
-            next.isalpha() and \
-            not current.isalpha()
+    case = current.islower() and next.isupper()
+    alpha = current != "'" and next.isalpha() and not current.isalpha()
     return case or alpha
