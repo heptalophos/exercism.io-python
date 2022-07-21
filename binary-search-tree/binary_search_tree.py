@@ -14,9 +14,7 @@ class BinarySearchTree(object):
             if node is None:
                 return []
             else:
-                return sorted(node.left) + \
-                             [node.data] + \
-                             sorted(node.right)
+                return sorted(node.left) + [node.data] + sorted(node.right)
         return sorted(self.root)
 
     def insert(self, node, elem):
