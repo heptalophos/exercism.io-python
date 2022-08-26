@@ -1,9 +1,9 @@
 # Globals for the directions
 # Change the values as you see fit
 NORTH = 0
-EAST = 1
+EAST  = 1
 SOUTH = 2
-WEST = 3
+WEST  = 3
 
 
 class Robot(object):
@@ -14,7 +14,7 @@ class Robot(object):
         'A': 'advance',
     }
 
-    def __init__(self, direction=NORTH, x=0, y=0):
+    def __init__(self, direction = NORTH, x = 0, y = 0):
         self.direction = direction
         self.coordinates = (x, y)
 
@@ -35,7 +35,7 @@ class Robot(object):
      
     def advance(self):
         x, y = self.coordinates
-        if self.direction == NORTH: y+= 1  
+        if self.direction == NORTH: y += 1  
         if self.direction == EAST:  x += 1 
         if self.direction == SOUTH: y -= 1  
         if self.direction == WEST:  x -= 1 
@@ -43,7 +43,6 @@ class Robot(object):
         if self.direction not in [NORTH, EAST, SOUTH, WEST]:
             raise Exception("Invalid bearing")
              
-
     def move(self, commands):
         for c in commands:
             getattr(self, Robot.valid_commands[c])()
