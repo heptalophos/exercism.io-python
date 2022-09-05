@@ -53,16 +53,11 @@ def exchangeable_value(budget, exchange_rate, spread, denomination):
     return get_value_of_bills(denomination, foreign_cash)
 
 
-def non_exchangeable_value(budget, exchange_rate, spread, denomination):
+def get_leftover_of_bills(budget, denomination):
     """
-
-    :param budget: float - the amount of your money you are planning to exchange.
-    :param exchange_rate: float - the unit value of the foreign currency.
-    :param spread: int - percentage that is taken as an exchange fee.
+ 
+    :param budget: float - the amount of money you are planning to exchange.
     :param denomination: int - the value of a single bill.
-    :return: int non-exchangeable value.
+    :return: float - the leftover amount that cannot be exchanged given the current denomination.
     """
-    real_exchange_rate = exchange_rate * (100 + spread) / 100
-    exchange_amount = exchange_money(budget, real_exchange_rate)
-    actual_exchangeable_value = exchangeable_value(budget, exchange_rate, spread, denomination)
-    return int(exchange_amount - actual_exchangeable_value)
+    return budget % denomination
