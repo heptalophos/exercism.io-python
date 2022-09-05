@@ -1,5 +1,4 @@
-triangle_inequality = lambda f: lambda sides: \
-                      f(sides) and 2 * max(sides) < sum(sides)
+triangle_inequality = lambda f: lambda sides: f(sides) and 2 * max(sides) < sum(sides)
 
 @triangle_inequality
 def equilateral(sides):
