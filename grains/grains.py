@@ -1,10 +1,8 @@
-def valid_input(integer_number):
-    return 1 <= integer_number and integer_number <= 64
-
+valid_square = lambda n: 1 <= n and n <= 64
 ERROR = "square must be between 1 and 64"
 
 def square(integer_number):
-    if valid_input(integer_number):
+    if valid_square(integer_number):
         return 1 << integer_number - 1
     else:
         raise ValueError(ERROR)
