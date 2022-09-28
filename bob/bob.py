@@ -1,15 +1,16 @@
 sanitized = lambda x : x.strip()
 silent    = lambda x : not x
-shout     = lambda x : x.isupper() 
+shouting  = lambda x : x.isupper() 
 question  = lambda x : x.endswith('?')
+yelling   = lambda x : shouting(x) and question(x)
 
 def response(text):
     text = sanitized(text)
     if silent(text):
         return "Fine. Be that way!"
-    if shout(text) and question(text):
+    if yelling(text):
         return "Calm down, I know what I'm doing!"
-    if shout(text):
+    if shouting(text):
         return "Whoa, chill out!"
     if question(text):
         return "Sure."
