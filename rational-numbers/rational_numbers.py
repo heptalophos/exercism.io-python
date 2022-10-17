@@ -14,11 +14,11 @@ class Rational(object):
         return '{}/{}'.format(self.numer, self.denom)
 
     def __add__(self, other):
-        return Rational(self.numer * other.denom + other.numer * self.denom, \
+        return Rational(self.numer * other.denom + other.numer * self.denom,
                         self.denom * other.denom)
 
     def __sub__(self, other):
-        return Rational(self.numer * other.denom - other.numer * self.denom, \
+        return Rational(self.numer * other.denom - other.numer * self.denom,
                         self.denom * other.denom)
 
     def __mul__(self, other):
@@ -54,3 +54,4 @@ class Rational(object):
         if denom == 0:
             return numer
         return Rational.gcd(denom, numer % denom)
+        
