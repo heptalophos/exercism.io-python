@@ -39,10 +39,12 @@ def reactor_efficiency(voltage, current, theoretical_max_power):
     generated_power = voltage * current
     efficiency = 100 * (generated_power / theoretical_max_power)
     band = lambda x: efficiency >= x
-    return "green"  if band(80) else \
-           "orange" if band(60) else \
-           "red"    if band(30) else \
-           "black"
+    return (
+            "green"  if band(80) else
+            "orange" if band(60) else
+            "red"    if band(30) else
+            "black"
+           )
 
 
 def fail_safe(temperature, neutrons_produced_per_second, threshold):
@@ -58,6 +60,8 @@ def fail_safe(temperature, neutrons_produced_per_second, threshold):
     - `temperature * neutrons per second` is not in the above-stated ranges ==  'DANGER'
     """
     criticality = temperature * neutrons_produced_per_second
-    return "LOW"    if criticality < 0.9 * threshold else \
-           "NORMAL" if (0.9 * threshold) <= criticality <= (1.1 * threshold) else \
-           "DANGER"
+    return (
+            "LOW"    if criticality < 0.9 * threshold else
+            "NORMAL" if (0.9 * threshold) <= criticality <= (1.1 * threshold) else
+            "DANGER"
+           )
