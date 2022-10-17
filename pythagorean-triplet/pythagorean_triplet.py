@@ -1,4 +1,3 @@
-
 ## function solving the updated (different) exercise specification 
 def triplets_with_sum(number):
     triplets = []
@@ -27,8 +26,8 @@ def primitive_triplets(number_in_triplet):
     triplets = set()
     for m in range(1, number_in_triplet//2 + 2):
         for n in range(1, m + 2):
-            if number_in_triplet == 2 * m * n  \
-               and euclidean_conditions(m, n):
+            if (number_in_triplet == 2 * m * n and 
+                euclidean_conditions(m, n)):
                 possible = [square(m) - square(n), 
                             number_in_triplet, 
                             square(m) + square(n)]
@@ -60,6 +59,6 @@ within_range = lambda n1, n2: n1 > n2 > 0
 hcd = lambda n1, n2: n1 if n2 == 0 else hcd(n2, n1 % n2)
 coprime = lambda n1, n2: hcd(n1, n2) == 1 
 parity = lambda n: 'odd' if odd(n) else 'even'
-euclidean_conditions = lambda x, y: within_range(x, y) \
-                       and coprime(x, y) \
-                       and parity(x) != parity(y)
+euclidean_conditions = (lambda x, y: within_range(x, y)
+                        and coprime(x, y)
+                        and parity(x) != parity(y))
