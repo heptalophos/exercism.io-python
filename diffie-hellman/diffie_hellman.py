@@ -1,10 +1,24 @@
+import random
+
 def private_key(p):
-    pass
+    return random.choice(range(2, p))
 
 
 def public_key(p, g, private):
-    pass
+    return modexp(g, private, p)
 
 
 def secret(p, public, private):
-    pass
+    return modexp(public, private, p)
+
+
+def modexp(base, exp, modulus):
+    p = 1
+    while exp > 0:
+        if exp & 1 == 1:
+            p *= base
+            p %= modulus
+        exp >>= 1
+        base *= base
+        base %= modulus
+    return p
