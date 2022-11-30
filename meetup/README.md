@@ -1,74 +1,78 @@
 # Meetup
 
-Calculate the date of meetups.
+Welcome to Meetup on Exercism's Python Track.
+If you need help running the tests or submitting your code, check out `HELP.md`.
 
-Typically meetups happen on the same day of the week.  In this exercise, you
-will take a description of a meetup date, and return the actual meetup date.
+## Instructions
+
+In this exercise, you will be given a general description of a meetup date and then asked to find the actual meetup date.
 
 Examples of general descriptions are:
 
-- The first Monday of January 2017
-- The third Tuesday of January 2017
-- The wednesteenth of January 2017
-- The last Thursday of January 2017
+- First Monday of January 2022
+- Third Tuesday of August 2021
+- Teenth Wednesday of May 2022
+- Teenth Sunday of July 2021
+- Last Thursday of November 2021
 
-The descriptors you are expected to parse are:
-first, second, third, fourth, fifth, last, monteenth, tuesteenth, wednesteenth,
-thursteenth, friteenth, saturteenth, sunteenth
+The descriptors you are expected to process are: `first`, `second`, `third`, `fourth`, `fifth`, `last`, `teenth`.
 
-Note that "monteenth", "tuesteenth", etc are all made up words. There was a
-meetup whose members realized that there are exactly 7 numbered days in a month
-that end in '-teenth'. Therefore, one is guaranteed that each day of the week
-(Monday, Tuesday, ...) will have exactly one date that is named with '-teenth'
-in every month.
+Note that descriptor `teenth` is a made-up word.
+There are exactly seven numbered days in a month that end with "teenth" ("thirteenth" to "nineteenth").
+Therefore, it is guaranteed that each day of the week (Monday, Tuesday, ...) will have exactly one numbered day ending with "teenth" each month.
 
-Given examples of a meetup dates, each containing a month, day, year, and
-descriptor calculate the date of the actual meetup.  For example, if given
-"The first Monday of January 2017", the correct meetup date is 2017/1/2.
+For example, if given "First Monday of January 2022", the correct meetup date is January 3, 2022.
 
+## Customizing and Raising Exceptions
 
-## Exception messages
+Sometimes it is necessary to both [customize](https://docs.python.org/3/tutorial/errors.html#user-defined-exceptions) and [`raise`](https://docs.python.org/3/tutorial/errors.html#raising-exceptions) exceptions in your code. When you do this, you should always include a **meaningful error message** to indicate what the source of the error is. This makes your code more readable and helps significantly with debugging.
 
-Sometimes it is necessary to raise an exception. When you do this, you should include a meaningful error message to
-indicate what the source of the error is. This makes your code more readable and helps significantly with debugging. Not
-every exercise will require you to raise an exception, but for those that do, the tests will only pass if you include
-a message.
+Custom exceptions can be created through new exception classes (see [`classes`](https://docs.python.org/3/tutorial/classes.html#tut-classes) for more detail.) that are typically subclasses of [`Exception`](https://docs.python.org/3/library/exceptions.html#Exception).
 
-To raise a message with an exception, just write it as an argument to the exception type. For example, instead of
-`raise Exception`, you should write:
+For situations where you know the error source will be a derivative of a certain exception type, you can choose to inherit from one of the [`built in error types`](https://docs.python.org/3/library/exceptions.html#base-classes) under the _Exception_ class. When raising the error, you should still include a meaningful message.
+
+This particular exercise requires that you create a _custom exception_ to be [raised](https://docs.python.org/3/reference/simple_stmts.html#the-raise-statement)/"thrown" when your `meetup()` function is given a weekday name and number combination that is invalid. The tests will only pass if you customize appropriate exceptions, `raise` those exceptions, and include appropriate error messages.
+
+To customize a `built-in exception`, create a `class` that inherits from that exception. When raising the custom exception with a message, write the message as an argument to the `exception` type:
 
 ```python
-raise Exception("Meaningful message indicating the source of the error")
+# subclassing the built-in ValueError to create MeetupDayException
+class MeetupDayException(ValueError):
+    """Exception raised when the Meetup weekday and count do not result in a valid date.
+
+    message: explanation of the error.
+
+    """
+    def __init__(self, message):
+        self.message = message
+
+        
+# raising a MeetupDayException
+raise MeetupDayException("That day does not exist.")
 ```
-
-## Running the tests
-
-To run the tests, run `pytest meetup_test.py`
-
-Alternatively, you can tell Python to run the pytest module:
-`python -m pytest meetup_test.py`
-
-### Common `pytest` options
-
-- `-v` : enable verbose output
-- `-x` : stop running tests on first failure
-- `--ff` : run failures from previous test before running other test cases
-
-For other options, see `python -m pytest -h`
-
-## Submitting Exercises
-
-Note that, when trying to submit an exercise, make sure the solution is in the `$EXERCISM_WORKSPACE/python/meetup` directory.
-
-You can find your Exercism workspace by running `exercism debug` and looking for the line that starts with `Workspace`.
-
-For more detailed information about running tests, code style and linting,
-please see [Running the Tests](http://exercism.io/tracks/python/tests).
 
 ## Source
 
-Jeremy Hinegardner mentioned a Boulder meetup that happens on the Wednesteenth of every month [https://twitter.com/copiousfreetime](https://twitter.com/copiousfreetime)
+### Created by
 
-## Submitting Incomplete Solutions
+- @sjakobi
 
-It's possible to submit an incomplete solution so you can see how others have completed the exercise.
+### Contributed to by
+
+- @acedrew
+- @behrtam
+- @BethanyG
+- @cmccandless
+- @Dog
+- @dvermd
+- @ikhadykin
+- @kytrinyx
+- @N-Parsons
+- @Peque
+- @pheanex
+- @tqa236
+- @ZacharyRSmith
+
+### Based on
+
+Jeremy Hinegardner mentioned a Boulder meetup that happens on the Wednesteenth of every month - https://twitter.com/copiousfreetime
