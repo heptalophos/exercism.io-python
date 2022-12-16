@@ -1,3 +1,6 @@
+def translate(text):
+    return ' '.join([pig_latin(word) for word in text.lower().split()])
+
 def pig_latin(word):
     if word.startswith (('a', 'e', 'i', 'o', 'u')):
         return word + 'ay'
@@ -10,6 +13,3 @@ def pig_latin(word):
     if word.startswith (('yt', 'xr')):
         return word + 'ay'
     return word[1:] + word[:1] + 'ay'
-        
-def translate(sentence):
-    return ' '.join([pig_latin(w) for w in sentence.lower().split()])
