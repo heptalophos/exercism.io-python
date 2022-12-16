@@ -55,7 +55,7 @@ def exchangeable_value(budget, exchange_rate, spread, denomination):
 
 def get_leftover_of_bills(budget, denomination):
     """
- 
+
     :param budget: float - the amount of money you are planning to exchange.
     :param denomination: int - the value of a single bill.
     :return: float - the leftover amount that cannot be exchanged given the current denomination.
