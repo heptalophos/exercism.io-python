@@ -1,36 +1,52 @@
 # Scale Generator
 
-Given a tonic, or starting note, and a set of intervals, generate
-the musical scale starting with the tonic and following the
-specified interval pattern.
+Welcome to Scale Generator on Exercism's Python Track.
+If you need help running the tests or submitting your code, check out `HELP.md`.
+
+## Instructions
+
+## Chromatic Scales
 
 Scales in Western music are based on the chromatic (12-note) scale. This
 scale can be expressed as the following group of pitches:
 
-A, A#, B, C, C#, D, D#, E, F, F#, G, G#
+> A, A♯, B, C, C♯, D, D♯, E, F, F♯, G, G♯
 
-A given sharp note (indicated by a #) can also be expressed as the flat
-of the note above it (indicated by a b) so the chromatic scale can also be
+A given sharp note (indicated by a ♯) can also be expressed as the flat
+of the note above it (indicated by a ♭) so the chromatic scale can also be
 written like this:
 
-A, Bb, B, C, Db, D, Eb, E, F, Gb, G, Ab
+> A, B♭, B, C, D♭, D, E♭, E, F, G♭, G, A♭
 
 The major and minor scale and modes are subsets of this twelve-pitch
 collection. They have seven pitches, and are called diatonic scales.
 The collection of notes in these scales is written with either sharps or
-flats, depending on the tonic. Here is a list of which are which:
+flats, depending on the tonic (starting note). Here is a table indicating
+whether the flat expression or sharp expression of the scale would be used for
+a given tonic:
 
-No Sharps or Flats:
-C major
-a minor
+| Key Signature | Major                 | Minor                |
+| ------------- | --------------------- | -------------------- |
+| Natural       | C                     | a                    |
+| Sharp         | G, D, A, E, B, F♯     | e, b, f♯, c♯, g♯, d♯ |
+| Flat          | F, B♭, E♭, A♭, D♭, G♭ | d, g, c, f, b♭, e♭   |
 
-Use Sharps:
-G, D, A, E, B, F# major
-e, b, f#, c#, g#, d# minor
+Note that by common music theory convention the natural notes "C" and "a"
+follow the sharps scale when ascending and the flats scale when descending.
+For the scope of this exercise the scale is only ascending.
 
-Use Flats:
-F, Bb, Eb, Ab, Db, Gb major
-d, g, c, f, bb, eb minor
+### Task
+
+Given a tonic, generate the 12 note chromatic scale starting with the tonic.
+
+- Shift the base scale appropriately so that all 12 notes are returned
+starting with the given tonic.
+- For the given tonic, determine if the scale is to be returned with flats
+or sharps.
+- Return all notes in uppercase letters (except for the `b` for flats)
+irrespective of the casing of the given tonic.
+
+## Diatonic Scales
 
 The diatonic scales, and all other scales that derive from the
 chromatic scale, are built upon intervals. An interval is the space
@@ -43,52 +59,47 @@ a "whole step" or "major second" (written as an upper-case "M"). The
 diatonic scales are built using only these two intervals between
 adjacent notes.
 
-Non-diatonic scales can contain other intervals.  An "augmented first"
-interval, written "A", has two interceding notes (e.g., from A to C or
-Db to E). There are also smaller and larger intervals, but they will not
-figure into this exercise.
+Non-diatonic scales can contain other intervals.  An "augmented second"
+interval, written "A", has two interceding notes (e.g., from A to C or D♭ to E)
+or a "whole step" plus a "half step". There are also smaller and larger
+intervals, but they will not figure into this exercise.
 
-## Exception messages
+### Task
 
-Sometimes it is necessary to raise an exception. When you do this, you should include a meaningful error message to
-indicate what the source of the error is. This makes your code more readable and helps significantly with debugging. Not
-every exercise will require you to raise an exception, but for those that do, the tests will only pass if you include
-a message.
+Given a tonic and a set of intervals, generate the musical scale starting with
+the tonic and following the specified interval pattern.
 
-To raise a message with an exception, just write it as an argument to the exception type. For example, instead of
-`raise Exception`, you should write:
+This is similar to generating chromatic scales except that instead of returning
+12 notes, you will return N+1 notes for N intervals.
+The first note is always the given tonic.
+Then, for each interval in the pattern, the next note is determined by starting from the previous note and skipping the number of notes indicated by the interval.
 
-```python
-raise Exception("Meaningful message indicating the source of the error")
-```
+For example, starting with G and using the seven intervals MMmMMMm, there would be the following eight notes:
 
-## Running the tests
+Note | Reason
+--|--
+G | Tonic
+A | M indicates a whole step from G, skipping G♯
+B | M indicates a whole step from A, skipping A♯
+C | m indicates a half step from B, skipping nothing
+D | M indicates a whole step from C, skipping C♯
+E | M indicates a whole step from D, skipping D♯
+F♯ | M indicates a whole step from E, skipping F
+G | m indicates a half step from F♯, skipping nothing
 
-To run the tests, run the appropriate command below ([why they are different](https://github.com/pytest-dev/pytest/issues/1629#issue-161422224)):
+## Source
 
-- Python 2.7: `py.test scale_generator_test.py`
-- Python 3.4+: `pytest scale_generator_test.py`
+### Created by
 
-Alternatively, you can tell Python to run the pytest module (allowing the same command to be used regardless of Python version):
-`python -m pytest scale_generator_test.py`
+- @cptjackson
 
-### Common `pytest` options
+### Contributed to by
 
-- `-v` : enable verbose output
-- `-x` : stop running tests on first failure
-- `--ff` : run failures from previous test before running other test cases
-
-For other options, see `python -m pytest -h`
-
-## Submitting Exercises
-
-Note that, when trying to submit an exercise, make sure the solution is in the `$EXERCISM_WORKSPACE/python/scale-generator` directory.
-
-You can find your Exercism workspace by running `exercism debug` and looking for the line that starts with `Workspace`.
-
-For more detailed information about running tests, code style and linting,
-please see [Running the Tests](http://exercism.io/tracks/python/tests).
-
-## Submitting Incomplete Solutions
-
-It's possible to submit an incomplete solution so you can see how others have completed the exercise.
+- @behrtam
+- @cmccandless
+- @crsmi
+- @Dog
+- @ikhadykin
+- @N-Parsons
+- @nikamirrr
+- @tqa236
