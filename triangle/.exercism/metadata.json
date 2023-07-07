@@ -1,9 +1,1 @@
-{
-    "track": "python",
-    "exercise": "triangle",
-    "id": "4c7e820f82a6408c9865ffb10e88d970",
-    "url": "https://exercism.org/tracks/python/exercises/triangle/solutions/4c7e820f82a6408c9865ffb10e88d970",
-    "handle": "heptalophos",
-    "is_requester": true,
-    "auto_approve": false
-}
+{"track":"python","exercise":"triangle","id":"4c7e820f82a6408c9865ffb10e88d970","url":"https://exercism.org/tracks/python/exercises/triangle","handle":"heptalophos","is_requester":true,"auto_approve":false}
