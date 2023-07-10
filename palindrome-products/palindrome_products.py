@@ -17,10 +17,10 @@ def first(minf, maxf, dir):
 
 def smallest(min_factor, max_factor):
     if min_factor > max_factor: 
-        raise ValueError("min must be <= max")
+        raise ValueError("Invalid range.")
     return first(min_factor, max_factor, 1)
 
 def largest(min_factor, max_factor):
     if min_factor > max_factor: 
-        raise ValueError("min must be <= max")
+        raise ValueError("Invalid range.")
     return first(min_factor, max_factor, -1)
