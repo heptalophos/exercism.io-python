@@ -1,5 +1,4 @@
 {
-  "blurb": "Implement basic list operations.",
   "authors": [
     "behrtam"
   ],
@@ -9,6 +8,7 @@
     "Dog",
     "dvermd",
     "gabriel376",
+    "IsaacG",
     "N-Parsons",
     "pheanex",
     "rootulp",
@@ -25,5 +25,6 @@
     "example": [
       ".meta/example.py"
     ]
-  }
+  },
+  "blurb": "Implement basic list operations."
 }
