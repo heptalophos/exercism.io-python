@@ -10,14 +10,14 @@ class PhoneNumber(object):
         if letters:
             raise ValueError("letters not permitted")
         if len(digits) < 10:
-            raise ValueError("incorrect number of digits")
+            raise ValueError("must not be fewer than 10 digits")
         if len(digits) > 11:
-            raise ValueError("more than 11 digits")
+            raise ValueError("must not be greater than 11 digits")
         if len(digits) == 11: 
-            if digits[0] == '1':
-                digits = digits[1:]
-            else:
+            if digits[0] != '1':
                 raise ValueError("11 digits must start with 1")
+            else:
+                digits = digits[1:]
         self.number = ''.join(digits[-10:]) or INVALID
         if self.number[0] == '0' :
             raise ValueError("area code cannot start with zero")
@@ -30,5 +30,7 @@ class PhoneNumber(object):
         self.area_code = self.number[:3]
 
     def pretty(self):
-        return '({})-{}-{}'.format(self.area_code, self.number[-7:-4], self.number[-4:])
+        return '({})-{}-{}'.format(self.area_code, 
+                                   self.number[-7:-4], 
+                                   self.number[-4:])
         
