@@ -6,7 +6,6 @@ from phone_number import (
 
 # Tests adapted from `problem-specifications//canonical-data.json`
 
-
 class PhoneNumberTest(unittest.TestCase):
     def test_cleans_the_number(self):
         number = PhoneNumber("(223) 456-7890").number
