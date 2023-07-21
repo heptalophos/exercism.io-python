@@ -6,7 +6,6 @@ from phone_number import (
 
 # Tests adapted from `problem-specifications//canonical-data.json`
 
-
 class PhoneNumberTest(unittest.TestCase):
     def test_cleans_the_number(self):
         number = PhoneNumber("(223) 456-7890").number
@@ -24,7 +23,7 @@ class PhoneNumberTest(unittest.TestCase):
         with self.assertRaises(ValueError) as err:
             PhoneNumber("123456789")
         self.assertEqual(type(err.exception), ValueError)
-        self.assertEqual(err.exception.args[0], "incorrect number of digits")
+        self.assertEqual(err.exception.args[0], "must not be fewer than 10 digits")
 
     def test_invalid_when_11_digits_does_not_start_with_a_1(self):
         with self.assertRaises(ValueError) as err:
@@ -44,7 +43,7 @@ class PhoneNumberTest(unittest.TestCase):
         with self.assertRaises(ValueError) as err:
             PhoneNumber("321234567890")
         self.assertEqual(type(err.exception), ValueError)
-        self.assertEqual(err.exception.args[0], "more than 11 digits")
+        self.assertEqual(err.exception.args[0], "must not be greater than 11 digits")
 
     def test_invalid_with_letters(self):
         with self.assertRaises(ValueError) as err:
