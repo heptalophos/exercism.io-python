@@ -1,9 +1,1 @@
-{
-    "track": "python",
-    "exercise": "pig-latin",
-    "id": "50e571f0b78f4dad92ddf7be64449ad1",
-    "url": "https://exercism.org/tracks/python/exercises/pig-latin/solutions/50e571f0b78f4dad92ddf7be64449ad1",
-    "handle": "heptalophos",
-    "is_requester": true,
-    "auto_approve": false
-}
+{"track":"python","exercise":"pig-latin","id":"50e571f0b78f4dad92ddf7be64449ad1","url":"https://exercism.org/tracks/python/exercises/pig-latin","handle":"heptalophos","is_requester":true,"auto_approve":false}
