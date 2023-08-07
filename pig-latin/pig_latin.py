@@ -1,5 +1,7 @@
 def translate(text):
-    return ' '.join([pig_latin(word) for word in text.lower().split()])
+    return ' '.join([pig_latin(word) 
+                     for word 
+                     in text.lower().split()])
 
 def pig_latin(word):
     if word.startswith (('a', 'e', 'i', 'o', 'u')):
