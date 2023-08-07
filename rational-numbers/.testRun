@@ -6,17 +6,6 @@ collected 36 items
 
 rational_numbers_test.py ....................................            [100%]
 
-========================== 36 passed in 0.44 seconds ==========================
-
-
-============================= test session starts =============================
-platform win32 -- Python 3.7.0, pytest-3.8.0, py-1.6.0, pluggy-0.7.1
-rootdir: ~\exercism\python\rational-numbers, inifile:
-plugins: remotedata-0.3.0, openfiles-0.3.0, doctestplus-0.1.3, arraydiff-0.2
-collected 36 items
-
-rational_numbers_test.py ....................................            [100%]
-
 ========================== 36 passed in 0.30 seconds ==========================
 
 
@@ -60,23 +49,6 @@ rational_numbers_test.py ......................................          [100%]
 
 
 
->python -m pytest rational_numbers_test.py
-
-============================= test session starts =============================
-platform win32 -- Python 3.7.0, pytest-6.2.2, py-1.10.0, pluggy-0.13.0
-rootdir: ~\exercism\python, configfile: pytest.ini
-plugins: hypothesis-6.6.0, arraydiff-0.3, astropy-header-0.1.2, cov-2.11.1, 
-         doctestplus-0.9.0, filter-subpackage-0.1.1, openfiles-0.5.0, 
-         remotedata-0.3.2
-
-collected 39 items
-
-rational_numbers_test.py .......................................         [100%]
-
-============================= 39 passed in 0.72s ==============================
-
-
-
 >python -m pytest -o markers=task rational_numbers_test.py
 
 ============================= test session starts =============================
@@ -91,3 +63,19 @@ collected 43 items
 rational_numbers_test.py ...........................................     [100%]
 
 ============================= 43 passed in 0.18s ==============================
+
+
+
+>python -m pytest -o markers=task rational_numbers_test.py
+
+============================= test session starts =============================
+platform win32 -- Python 3.9.13, pytest-7.1.2, pluggy-1.0.0
+
+rootdir: ~\exercism\python, configfile: pytest.ini
+plugins: anyio-3.5.0
+
+collected 43 items
+
+rational_numbers_test.py ...........................................     [100%]
+
+============================= 43 passed in 0.10s ==============================
