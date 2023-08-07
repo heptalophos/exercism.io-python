@@ -58,9 +58,10 @@ def categorize_dish(dish_name: str, dish_ingredients: list[str]) -> str:
 
     ks = 'VEGAN', 'VEGETARIAN', 'PALEO', 'KETO', 'OMNIVORE'
     vs = VEGAN, VEGETARIAN, PALEO, KETO, OMNIVORE
-    for k, v in zip(ks, vs):
-        if set(dish_ingredients).issubset(v):
-            return dish_name + ': ' + k
+    for key, value in zip(ks, vs):
+        if set(dish_ingredients).issubset(value):
+            return dish_name + ': ' + key
+    return dish_name + ': not categorized'
 
 
 def tag_special_ingredients(dish: tuple[str, list[str]]) -> tuple[str, set[str]]:
