@@ -10,7 +10,7 @@ from sets_categories_data import (VEGAN,
                                   SPECIAL_INGREDIENTS)
 
 
-def clean_ingredients(dish_name, dish_ingredients):
+def clean_ingredients(dish_name: str, dish_ingredients: list[str]) -> tuple[str, set[str]]:
     """Remove duplicates from `dish_ingredients`.
 
     :param dish_name: str - containing the dish name.
@@ -21,10 +21,10 @@ def clean_ingredients(dish_name, dish_ingredients):
     followed by the de-duped `set` of ingredients as the second item.
     """
 
-    pass
+    return dish_name, set(dish_ingredients)
 
 
-def check_drinks(drink_name, drink_ingredients):
+def check_drinks(drink_name: str, drink_ingredients: list[str]) -> str:
     """Append "Cocktail" (alcohol)  or "Mocktail" (no alcohol) to `drink_name`, based on `drink_ingredients`.
 
     :param drink_name: str - name of the drink.
@@ -36,10 +36,14 @@ def check_drinks(drink_name, drink_ingredients):
 
     """
 
-    pass
+    if not ALCOHOLS.intersection(drink_ingredients):
+        drink_name += ' Mocktail'
+    else:
+        drink_name += ' Cocktail'
+    return drink_name
 
 
-def categorize_dish(dish_name, dish_ingredients):
+def categorize_dish(dish_name: str, dish_ingredients: list[str]) -> str:
     """Categorize `dish_name` based on `dish_ingredients`.
 
     :param dish_name: str - dish to be categorized.
@@ -52,10 +56,14 @@ def categorize_dish(dish_name, dish_ingredients):
 
     """
 
-    pass
+    ks = 'VEGAN', 'VEGETARIAN', 'PALEO', 'KETO', 'OMNIVORE'
+    vs = VEGAN, VEGETARIAN, PALEO, KETO, OMNIVORE
+    for k, v in zip(ks, vs):
+        if set(dish_ingredients).issubset(v):
+            return dish_name + ': ' + k
 
 
-def tag_special_ingredients(dish):
+def tag_special_ingredients(dish: tuple[str, list[str]]) -> tuple[str, set[str]]:
     """Compare `dish` ingredients to `SPECIAL_INGREDIENTS`.
 
     :param dish: tuple - of (dish name, list of dish ingredients).
@@ -66,10 +74,10 @@ def tag_special_ingredients(dish):
     SPECIAL_INGREDIENTS constant imported from `sets_categories_data.py`.
     """
 
-    pass
+    return dish[0], set(dish[1]).intersection(SPECIAL_INGREDIENTS)
 
 
-def compile_ingredients(dishes):
+def compile_ingredients(dishes: list[set[str]]) -> set[str]:
     """Create a master list of ingredients.
 
     :param dishes: list - of dish ingredient sets.
@@ -78,10 +86,10 @@ def compile_ingredients(dishes):
     This function should return a `set` of all ingredients from all listed dishes.
     """
 
-    pass
+    return set.union(*dishes)
 
 
-def separate_appetizers(dishes, appetizers):
+def separate_appetizers(dishes:list[str], appetizers:list[str]) -> list[str]:
     """Determine which `dishes` are designated `appetizers` and remove them.
 
     :param dishes: list - of dish names.
@@ -92,10 +100,10 @@ def separate_appetizers(dishes, appetizers):
     Either list could contain duplicates and may require de-duping.
     """
 
-    pass
+    return list(set(dishes).difference(set(appetizers)))
 
 
-def singleton_ingredients(dishes, intersection):
+def singleton_ingredients(dishes: list[set[str]], intersection: set[str]) -> set[str]:
     """Determine which `dishes` have a singleton ingredient (an ingredient that only appears once across dishes).
 
     :param dishes: list - of ingredient sets.
@@ -110,4 +118,4 @@ def singleton_ingredients(dishes, intersection):
     The function should return a `set` of ingredients that only appear in a single dish.
     """
 
-    pass
+    return set.union(*dishes) - intersection
