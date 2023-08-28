@@ -23,10 +23,8 @@ def map(function, xs):
     return foldl(lambda acc, x: append(acc, [function(x)]), xs, [])
 
 def filter(function, xs):
-    return foldl(lambda acc, x: 
-                    append(acc, [x]) if function(x) else acc,
-                 xs, []
-                )
+    return foldl(lambda acc, x: append(acc, [x]) if function(x) else acc,
+                 xs, [])
 
 def reverse(xs):
     return foldr(lambda acc, x: append(acc, [x]), xs, [])
