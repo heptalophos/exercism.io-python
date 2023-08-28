@@ -9,4 +9,4 @@ def transpose(lines):
             while len(matrix[col]) < row:
                 matrix[col].append(' ')
             matrix[col].append(ch)
-    return '\n'.join(''.join(r) for r in matrix)
+    return '\n'.join(''.join(row) for row in matrix)
