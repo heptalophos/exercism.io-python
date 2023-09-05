@@ -7,7 +7,7 @@ def swapper(func):
         if first == second:
             return 2
         if len(first) > len(second):
-            return SUPERLIST * func(second, first)
+            return 3 * func(second, first)
         else:
             return func(first, second)
     return swap
@@ -17,5 +17,5 @@ def sublist(small_list, big_list):
     """Checks if first list is a sublist of the seconds"""
     for i in range(len(big_list) - len(small_list) + 1):
         if small_list == big_list[i: i+len(small_list)]:
-            return SUBLIST
-    return UNEQUAL
+            return 1
+    return 0
