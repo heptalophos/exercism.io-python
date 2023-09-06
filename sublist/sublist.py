@@ -1,25 +1,22 @@
-from collections import deque
+SUPERLIST, EQUAL, SUBLIST, UNEQUAL = 3, 2, 1, 0
 
-SUBLIST, SUPERLIST, EQUAL, UNEQUAL = 3, 2, 1, 0
+def swapper(func):
+    """Wrapper that ensures the first argument 
+       is smaller then the second"""
+    def swap(first, second):
+        """swaps first and second argument 
+           if the second is smaller"""
+        if first == second:
+            return EQUAL
+        if len(first) > len(second):
+            return SUPERLIST * func(second, first)
+        else:
+            return func(first, second)
+    return swap
 
-def sublist(l1, l2):
-    if l1 == [] and l2:
-        return SUBLIST
-    if l2 == [] and l1:
-        return SUPERLIST
-    if len(l1) == len(l2):
-        return EQUAL * int(l1 == l2)
-    if len(l1) < len(l2):
-        sub, sup = l1, l2 
-    else:
-        sub, sup = l2, l1
-    ls = deque([], len(sub))
-    try:
-        for x in sup:
-            ls.append(x)
-            if list(ls) == sub:
-                return SUBLIST if sub == l1 else SUPERLIST
-    except:
-        return EQUAL
-    finally:
-        return UNEQUAL
+@swapper
+def sublist(sub, sup):
+    for i in range(len(sup) - len(sub) + 1):
+        if sub == sup[i:i + len(sub)]:
+            return SUBLIST
+    return UNEQUAL

@@ -9,5 +9,5 @@ def shift(c, k):
         return chr((diff(c, 'A') + k) % 26 + ord('A'))
     return c
 
-# Aux
+# Auxiliary
 diff = lambda c1, c2: ord(c1) - ord(c2)
