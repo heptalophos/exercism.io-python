@@ -11,7 +11,6 @@ class Luhn(object):
             if (digits[i] < 5):
                 digits[i] *= 2
             else: 
-                digits[i] *= 2
+                digits[i] *= 2 
                 digits[i] -= 9
-                # digits[i] = 2 * digits[i] - 9 
         return sum(digits) % 10 == 0
