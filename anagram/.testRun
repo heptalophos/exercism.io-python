@@ -35,3 +35,19 @@ collected 14 items
 anagram_test.py ..............                                           [100%]
 
 ========================== 14 passed in 0.06 seconds ==========================
+
+
+
+>python -m pytest -o markers=task anagram_test.py
+
+============================= test session starts =============================
+platform win32 -- Python 3.9.13, pytest-7.1.2, pluggy-1.0.0
+
+rootdir: ~\exercism\python, configfile: pytest.ini
+plugins: anyio-3.5.0
+
+collected 14 items
+
+anagram_test.py ..............                                           [100%]
+
+============================= 14 passed in 0.05s ==============================
