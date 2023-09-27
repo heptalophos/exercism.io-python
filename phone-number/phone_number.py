@@ -10,9 +10,9 @@ class PhoneNumber(object):
         if letters:
             raise ValueError("letters not permitted")
         if len(digits) < 10:
-            raise ValueError("must not be fewer than 10 digits")
+            raise ValueError("incorrect number of digits")
         if len(digits) > 11:
-            raise ValueError("must not be greater than 11 digits")
+            raise ValueError("more than 11 digits")
         if len(digits) == 11: 
             if digits[0] != '1':
                 raise ValueError("11 digits must start with 1")
@@ -30,7 +30,5 @@ class PhoneNumber(object):
         self.area_code = self.number[:3]
 
     def pretty(self):
-        return '({})-{}-{}'.format(self.area_code, 
-                                   self.number[-7:-4], 
-                                   self.number[-4:])
+        return '({})-{}-{}'.format(self.area_code, self.number[-7:-4], self.number[-4:])
         
