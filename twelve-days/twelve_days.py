@@ -21,7 +21,8 @@ def gifts(n):
     return ' '.join(*[gifts]) + final
 
 def verse(n):
-    return f'On the {NTHDAY[n]} day of Christmas my true love gave to me: {gifts(n)}'
+    nth, these = NTHDAY[n], gifts(n)
+    return f'On the {nth} day of Christmas my true love gave to me: {these}'
 
 def recite(start_verse, end_verse):
     return [verse(x - 1) for x in range(start_verse, end_verse + 1)]
