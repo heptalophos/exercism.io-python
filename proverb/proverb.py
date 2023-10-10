@@ -17,6 +17,6 @@ def proverb(*input_data, qualifier=None):
         (cause, result) = pair 
         premise = f'For want of a {cause} ' 
         conclusion = f'the {result} was lost.'
-        verses.append(f'{premise}{conclusion}')
-    verses.append(epilogue)
+        verses[len(verses):] = [f'{premise}{conclusion}']
+    verses[len(verses):] = [epilogue]
     return verses
