@@ -1,9 +1,1 @@
-{
-    "track": "python",
-    "exercise": "scale-generator",
-    "id": "8734142f1db649349d193b0b154464cb",
-    "url": "https://exercism.org/tracks/python/exercises/scale-generator/solutions/8734142f1db649349d193b0b154464cb",
-    "handle": "heptalophos",
-    "is_requester": true,
-    "auto_approve": false
-}
+{"track":"python","exercise":"scale-generator","id":"8734142f1db649349d193b0b154464cb","url":"https://exercism.org/tracks/python/exercises/scale-generator","handle":"heptalophos","is_requester":true,"auto_approve":false}
