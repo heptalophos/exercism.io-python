@@ -1,5 +1,6 @@
 >python -m pytest -o markers=task spiral_matrix_test.py
 
+Thu Oct 19 17:45:32 GTBDT 2023
 ============================= test session starts =============================
 platform win32 -- Python 3.9.13, pytest-7.1.2, pluggy-1.0.0
 
@@ -11,3 +12,20 @@ collected 6 items
 spiral_matrix_test.py ......                                             [100%]
 
 ============================== 6 passed in 0.04s ==============================
+
+
+
+>python -m pytest -o markers=task spiral_matrix_test.py
+
+Thu Oct 19 21:15:57 GTBDT 2023
+============================= test session starts =============================
+platform win32 -- Python 3.9.13, pytest-7.1.2, pluggy-1.0.0
+
+rootdir: ~\exercism\python, configfile: pytest.ini
+plugins: anyio-3.5.0
+
+collected 6 items
+
+spiral_matrix_test.py ......                                             [100%]
+
+============================== 6 passed in 0.06s ==============================
