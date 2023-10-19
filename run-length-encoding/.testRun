@@ -44,7 +44,7 @@ run_length_encoding_test.py .............                                [100%]
 
 ============================= test session starts =============================
 platform win32 -- Python 3.9.13, pytest-7.1.2, pluggy-1.0.0
-rootdir: C:\Users\Chris\exercism\python, configfile: pytest.ini
+rootdir: ~\exercism\python, configfile: pytest.ini
 plugins: anyio-3.5.0
 collected 13 items
 

@@ -1,22 +1,22 @@
 def spiral_matrix(size: int) -> [[int]]:
-    if size <= 0: return []
+    if not size: return []
+    matrix = [[None for _ in range(size)] for _ in range(size)]
     val = 1
-    matrix = [[None] * size for _ in range(size)]
-    for index in range (size + 1 // 2):
-        row = index
-        for col in range(row, (size - 1) - row):
+    for idx in range (size + 1 // 2):
+        for col in range(idx, (size - 1) - idx, 1):
+            row = idx
             matrix[row][col] = val
             val += 1
-        col = index
-        for row in range(col, (size - 1) - col):
-            matrix[row][size - index - 1] = val
-            val += 1
-        row = size - index - 1
-        for col in range(row, index, -1):
+        for row in range(idx, (size - 1) - idx, 1):
+            col = (size - 1) - idx
             matrix[row][col] = val
             val += 1
-        col = index
-        for row in range((size - 1) - col, col, -1):
+        for col in range((size - 1) - idx, idx, -1):
+            row = (size - 1) - idx
+            matrix[row][col] = val
+            val += 1
+        for row in range((size - 1) - idx, idx, -1):
+            col = idx
             matrix[row][col] = val
             val += 1
         row, col = size // 2, (size - 1) // 2

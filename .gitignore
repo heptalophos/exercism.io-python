@@ -10,7 +10,7 @@ cleanup.*
 # pytest.ini
 HELP.md
 HINTS.md
-
+prepareTests.ps1
 .fake
 .ionide
 debug.log
