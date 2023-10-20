@@ -13,10 +13,9 @@ class SpaceAge(object):
         self.on_uranus  = self.on_planet(84.016846)
         self.on_neptune = self.on_planet(164.79132)
 
-    def on_planet(self, orb_period):
+    def on_planet(self, orbital_period):
         sec = self.seconds
         EARTH = self.EARTH_YEAR
-        planet_year = sec / (EARTH * orb_period)
-        def rounded():
-            return round(planet_year, 2)
+        planet_year = sec / (EARTH * orbital_period)
+        def rounded(): return round(planet_year, 2)
         return rounded
