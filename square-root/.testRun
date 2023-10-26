@@ -11,3 +11,20 @@ collected 6 items
 square_root_test.py ......                                               [100%]
 
 ============================== 6 passed in 0.05s ==============================
+
+
+
+Thu Oct 26 17:37:03 GTBDT 2023
+>python -m pytest -o markers=task square_root_test.py
+
+============================= test session starts =============================
+platform win32 -- Python 3.9.13, pytest-7.1.2, pluggy-1.0.0
+
+rootdir: ~\exercism\python, configfile: pytest.ini
+plugins: anyio-3.5.0
+
+collected 6 items
+
+square_root_test.py ......                                               [100%]
+
+============================== 6 passed in 0.03s ==============================
