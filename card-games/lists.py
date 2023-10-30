@@ -54,7 +54,7 @@ def average_even_is_average_odd(hand):
     :param hand: list - cards in hand.
     :return: bool - are even and odd averages equal?
     """
-    return card_average(hand[0::1]) == card_average(hand[1::2])
+    return card_average(hand[0::2]) == card_average(hand[1::2])
 
 def maybe_double_last(hand):
     """Multiply a Jack card value in the last index position by 2.
@@ -62,5 +62,6 @@ def maybe_double_last(hand):
     :param hand: list - cards in hand.
     :return: list - hand with Jacks (if present) value doubled.
     """
-    hand[-1] = 2 * hand[-1] if hand[-1] == 11 else hand[-1]
+    jack = 11
+    hand[-1] = 2 * hand[-1] if hand[-1] == jack else hand[-1]
     return hand
