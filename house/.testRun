@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Tue Oct 31 19:44:03 GTBST 2023
+-------------------------------------------------------------------------------
+>python -m pytest -o markers=task house_test.py 
+
+============================= test session starts =============================
+platform win32 -- Python 3.9.13, pytest-7.1.2, pluggy-1.0.0
+
+rootdir: ~\exercism\python, configfile: pytest.ini
+plugins: anyio-3.5.0
+
+collected 14 items
+
+house_test.py ..............                                             [100%]
+
+============================= 14 passed in 0.05s ==============================
