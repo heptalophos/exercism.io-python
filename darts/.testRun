@@ -21,3 +21,22 @@ collected 13 items
 darts_test.py .............                                              [100%]
 
 ========================== 13 passed in 0.06 seconds ==========================
+
+
+
+-------------------------------------------------------------------------------
+Sat Nov  4 18:48:42 GTBST 2023
+-------------------------------------------------------------------------------
+>python -m pytest -o markers=task darts_test.py
+
+============================= test session starts =============================
+platform win32 -- Python 3.9.13, pytest-7.1.2, pluggy-1.0.0
+
+rootdir: ~\exercism\python, configfile: pytest.ini
+plugins: anyio-3.5.0
+
+collected 13 items
+
+darts_test.py .............                                              [100%]
+
+============================= 13 passed in 0.05s ==============================
