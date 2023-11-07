@@ -13,8 +13,14 @@ def generate_seat_letters(number):
     Example: A, B, C, D
 
     """
-
-    pass
+    
+    seats = ['A', 'B', 'C', 'D']
+    seat = 0
+    for _ in range(number):
+        yield seats[seat]
+        seat += 1
+        if seat == 4:
+            seat = 0
 
 
 def generate_seats(number):
@@ -34,7 +40,13 @@ def generate_seats(number):
 
     """
 
-    pass
+    seats = ['A', 'B', 'C', 'D']
+    seat = 0
+    for _ in range(number):
+        seat += 1 + (seat >= 13)
+        row = 1 + seat // 4
+        yield f'{row}{seats[seat]}'
+
 
 def assign_seats(passengers):
     """Assign seats to passengers.
