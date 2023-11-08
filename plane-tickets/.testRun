@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Wed Nov  8 17:30:47 GTBST 2023
+-------------------------------------------------------------------------------
+>python -m pytest -o markers=task generators_test.py 
+
+============================= test session starts =============================
+platform win32 -- Python 3.9.13, pytest-7.1.2, pluggy-1.0.0
+
+rootdir: ~\exercism\python, configfile: pytest.ini
+plugins: anyio-3.5.0
+
+collected 8 items
+
+generators_test.py ........                                              [100%]
+
+============================== 8 passed in 0.05s ==============================
