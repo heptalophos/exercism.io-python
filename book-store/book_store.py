@@ -17,5 +17,5 @@ def total(basket):
     for i in range(5):
         books = counts[i]
         discount = discounts[i]
-        final_price += (i + 1) * books * 8 * (100 - discount);
+        final_price += (i + 1) * books * 8 * (100 - discount)
     return final_price
