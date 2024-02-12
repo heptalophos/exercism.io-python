@@ -58,7 +58,6 @@ def send_to_store(cart, aisle_mapping):
     fulfillment_cart = dict()
     sorted_cart = sorted(cart.items(), reverse=True)
     for item, count in sorted_cart: 
-        # aisle, refrigeration = aisle_mapping[item]
         fulfillment_cart[item] = [count, *aisle_mapping[item]]
     return fulfillment_cart
 
