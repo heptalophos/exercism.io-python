@@ -1,8 +1,8 @@
-NUMS = 'no|one|two|three|four|five|six|seven|eight|nine|ten'.split('|')
+How_Many = 'no|one|two|three|four|five|six|seven|eight|nine|ten'.split('|')
 
 def bottles(num: int, cap=False) -> str:
     s = 's' if num != 1 else ''
-    this_many = NUMS[num].capitalize() if cap else NUMS[num]
+    this_many = How_Many[num].capitalize() if cap else How_Many[num]
     return f'{this_many} green bottle{s}'
 
 def prologue(num: int) -> list[str]:
@@ -16,7 +16,7 @@ def conclusion(num: int) -> list[str]:
     return f'There\'ll be {bottles(num - 1, False)} hanging on the wall.'
 
 def recite(start, take=1):
-    song = []
+    song = list()
     for n in range(start, start - take, -1):
         song += [*prologue(n), premise(), conclusion(n)]
         if n > start - take + 1:
