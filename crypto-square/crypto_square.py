@@ -1,19 +1,16 @@
 from string import whitespace, punctuation
 from itertools import zip_longest
-from math import ceil, sqrt
 
 def cipher_text(plain_text):
-    othercharacters = whitespace + punctuation
-    lower_plain, sanitized = plain_text.casefold().strip(), ''
-    chunkify = lambda n, ls: zip_longest(*[iter(ls)] * n, 
-                                       fillvalue=' ')
+    sanitized, othercharacters = '', whitespace + punctuation
+    chunkify = lambda n, ls: zip_longest(*[iter(ls)] * n, fillvalue=' ')
     transpose = lambda m: zip(*m)
-    for ch in lower_plain:
-        if ch in othercharacters:
+    for character in plain_text.casefold().strip():
+        if character in othercharacters:
             continue
-        sanitized += ch
+        sanitized += character
     if not sanitized:
-        return ""
-    sq_side = ceil(sqrt(len(sanitized)))
+        return ''
+    sq_side = int(-1 * (len(sanitized) ** 0.5) // 1 * -1)
     rows = chunkify(sq_side, sanitized)
     return ' '.join(''.join(c) for c in transpose(rows))
