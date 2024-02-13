@@ -5,7 +5,7 @@ from math import ceil, sqrt
 def cipher_text(plain_text):
     othercharacters = whitespace + punctuation
     lower_plain, sanitized = plain_text.casefold().strip(), ''
-    chunks = lambda n, ls: zip_longest(*[iter(ls)] * n, 
+    chunkify = lambda n, ls: zip_longest(*[iter(ls)] * n, 
                                        fillvalue=' ')
     transpose = lambda m: zip(*m)
     for ch in lower_plain:
@@ -15,5 +15,5 @@ def cipher_text(plain_text):
     if not sanitized:
         return ""
     sq_side = ceil(sqrt(len(sanitized)))
-    rows = chunks(sq_side, sanitized)
+    rows = chunkify(sq_side, sanitized)
     return ' '.join(''.join(c) for c in transpose(rows))
