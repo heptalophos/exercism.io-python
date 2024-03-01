@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Fri Mar  1 20:08:30 GTBST 2024
+-------------------------------------------------------------------------------
+>python -m pytest -o markers=task  
+
+============================= test session starts =============================
+platform win32 -- Python 3.9.13, pytest-7.1.2, pluggy-1.0.0
+
+rootdir: ~\exercism\python, configfile: pytest.ini
+plugins: anyio-3.5.0
+
+collected 20 items
+
+simple_linked_list_test.py ....................                          [100%]
+
+============================= 20 passed in 0.05s ==============================
