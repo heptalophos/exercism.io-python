@@ -1,56 +1,50 @@
 class Node:
-    def __init__(self, value):
-        self.value = value
-        self.next = None
-
+    def __init__(self, value, next):
+        self._value = value
+        self._next = next
     def value(self):
-        return self.value
-
+        return self._value
     def next(self):
-        return self.next
+        return self._next
 
 
 class LinkedList:
     def __init__(self, values=[]):
-        self.elements = values
-        self.first = None
+        self._head = None
         for x in values:
             self.push(x)
-
     def __len__(self):
-        size, node = 0, self.first
+        size, node = 0, self._head
         while node:
-            node = node.next()
             size += 1
-        return size
-    
-    def __iter__(self):
-        node = self.head()
-        while node is not None:
-            yield node.value()
             node = node.next()
-
+        return size
+    def __iter__(self):
+        cur = self._head
+        while cur:
+            yield cur.value()
+            cur = cur.next()
     def head(self):
-        if not self.first:
+        if self._head is None:
             raise EmptyListException("The list is empty.")
-        return self.first            
-
+        return self._head      
     def push(self, value):
-        node = Node(self.head())
-        self.first = node
+        node = Node(value, self._head)
+        self._head = node
         return self
-
     def pop(self):
-        if self.head() is None:
+        if self._head is None:
             raise EmptyListException("The list is empty.")
-        popped = self.head().value()
-        self.first = self.first.next()
-        return popped
-
+        popped = self._head
+        self._head = popped.next()
+        popped._next = None
+        return popped.value()
     def reversed(self):
-        return LinkedList(self)
-
+        rev = LinkedList()
+        for x in self:
+            rev.push(x)
+        return rev
 
 class EmptyListException(Exception):
     def __init__(self, message: str=None):
-        self.message = message
+        self.error_message = message
