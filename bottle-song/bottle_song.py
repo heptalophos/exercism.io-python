@@ -1,6 +1,6 @@
 How_Many = 'no|one|two|three|four|five|six|seven|eight|nine|ten'.split('|')
 
-def bottles(num: int, cap=False) -> str:
+def bottles(num: int, cap: bool=False) -> str:
     s = 's' if num != 1 else ''
     this_many = How_Many[num].capitalize() if cap else How_Many[num]
     return f'{this_many} green bottle{s}'
