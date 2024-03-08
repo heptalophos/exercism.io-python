@@ -27,4 +27,4 @@ def resistor_label(colors: list[str]) -> str:
     elif value > 1e0: ohms = value
     else: ohms = 0
     units = f'{ohms} {magn}ohms'
-    return f'{value:g} {units} ±{TOLERANCES[tolerance]}%'
+    return f'{value:g} {units} ±{tolerance}%'
