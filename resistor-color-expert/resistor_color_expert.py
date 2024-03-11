@@ -1,4 +1,4 @@
-COLORS = "black brown red orange yellow green blue violet grey white".split()
+COLORS = "black-brown-red-orange-yellow-green-blue-violet-grey-white".split("-")
 color_code = lambda color: COLORS.index(color)
 
 TOLERANCES = {
@@ -20,8 +20,9 @@ def resistor_label(colors: list[str]) -> str:
     if len(colors) == 4: b1 = 0
     else: b1 = color_code(colors[-5])
     value = (b1 * 100 + b2 * 10 + b3) * 10 ** zeros
+    # value = (b1 * 100 + b2 * 10 + b3) ** zeros
     ohms, magn = 0, ''
-    if value > 1e9: ohms, magn = int(value // 1e9), 'giga'
+    if value   > 1e9: ohms, magn = int(value // 1e9), 'giga'
     elif value > 1e6: ohms, magn = int(value // 1e6), 'mega'
     elif value > 1e3: ohms, magn = int(value // 1e3), 'kilo'
     elif value > 1e0: ohms = value
