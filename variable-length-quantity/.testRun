@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Wed Mar 13 18:43:51 GTBST 2024
+-------------------------------------------------------------------------------
+>python -m pytest -o markers=task  
+
+============================= test session starts =============================
+platform win32 -- Python 3.9.13, pytest-7.1.2, pluggy-1.0.0
+
+rootdir: ~\exercism\python, configfile: pytest.ini
+plugins: anyio-3.5.0
+
+collected 26 items
+
+variable_length_quantity_test.py ..........................              [100%]
+
+============================= 26 passed in 0.07s ==============================
