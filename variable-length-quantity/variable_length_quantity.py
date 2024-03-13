@@ -3,10 +3,10 @@ def encode(numbers: list[int]) -> list[int]:
     for n in reversed(numbers):
         if n == 0:
             encoded += [0]
-        msbyte = 0
+        msbit = 0
         while n > 0:
-            encoded += [msbyte ^ (n & 127)]
-            msbyte = 128
+            encoded += [msbit ^ (n & 127)]
+            msbit = 128
             n >>= 7
     return encoded[::-1]
 
