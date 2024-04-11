@@ -1,7 +1,26 @@
 -------------------------------------------------------------------------------
 Wed Mar 13 17:33:48 GTBST 2024
 -------------------------------------------------------------------------------
->python -m pytest -o markers=task  
+>python -m pytest -o markers=task  resistor_color_expert_test.py
+
+============================= test session starts =============================
+platform win32 -- Python 3.9.13, pytest-7.1.2, pluggy-1.0.0
+
+rootdir: ~\exercism\python, configfile: pytest.ini
+plugins: anyio-3.5.0
+
+collected 10 items
+
+resistor_color_expert_test.py ..........                                 [100%]
+
+============================= 10 passed in 0.04s ==============================
+
+
+
+-------------------------------------------------------------------------------
+Mon Apr  1 20:31:21 GTBDT 2024
+-------------------------------------------------------------------------------
+>python -m pytest -o markers=task  resistor_color_expert_test.py 
 
 ============================= test session starts =============================
 platform win32 -- Python 3.9.13, pytest-7.1.2, pluggy-1.0.0
