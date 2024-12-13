@@ -5,7 +5,7 @@ class Node:
 
     def value(self):
         return self._value
-    
+
     def next(self):
         return self._next
 

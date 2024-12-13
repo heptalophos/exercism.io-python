@@ -1,7 +1,7 @@
 -------------------------------------------------------------------------------
 Fri Mar  1 20:08:30 GTBST 2024
 -------------------------------------------------------------------------------
->python -m pytest -o markers=task  
+>python -m pytest -o markers=task simple_linked_list_test.py 
 
 ============================= test session starts =============================
 platform win32 -- Python 3.9.13, pytest-7.1.2, pluggy-1.0.0
