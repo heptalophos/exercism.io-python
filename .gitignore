@@ -1,12 +1,15 @@
 .ionide/
 .vscode/
 .idea/
+.clj-kondo/
+.lsp/
 /*/__pycache__/
 /*/.pytest_cache/
 /*/*.pyc
 /cleanup.ps1
 cleanup.sh
 cleanup.*
+runTests.ps1
 # pytest.ini
 HELP.md
 HINTS.md
