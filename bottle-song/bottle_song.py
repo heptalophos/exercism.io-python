@@ -13,7 +13,9 @@ def premise():
     return f'And if {bottles(1, False)} should accidentally fall,'
 
 def conclusion(num: int) -> list[str]:
-    return f'There\'ll be {bottles(num - 1, False)} hanging on the wall.'
+    how_many = f'There\'ll be {bottles(num - 1, False)} ' 
+    bottles_on_wall = 'hanging on the wall.'
+    return how_many + bottles_on_wall # type: ignore
 
 def recite(start, take=1):
     song = list()
